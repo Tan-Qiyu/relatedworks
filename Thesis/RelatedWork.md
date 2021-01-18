@@ -2,8 +2,9 @@
 
 <span id="return"> </span>
 > ## **CONTENT** 
+
 - [Time Series Representation/Classification/Forecasting](#tsrcf)
-    - (1) Distance/Feature/Kernel-based
+    - **Part 1:** Distance/Feature/Kernel-based
     - [Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles](#anthonybagnall2015)
     - [Similarity Measure Selection for Clustering Time Series Databases](#usuemori2016)
     - [Mining Novel Multivariate Relationships In Time Series Data Using Correlation Networks](#saurabhagrawal2020)
@@ -15,17 +16,25 @@
     - [Highly Comparative Feature-Based Time-Series Classification](#bendfulcher)
     - [Efficient Temporal Pattern Recognition by Means of Dissimilarity Space Embedding With Discriminative Prototypes](#briankenjiiwana)
     - [A Global Averaging Method For Dynamic Time Warping, With Applications To Clustering](#francois2011)
-    - (2) Model-based ((UN)supervised / deep learning)
+    - **Part 2:** Model-based ((UN)supervised / deep learning)
     - [Time Series Classification with Multivariate Convolutional Neural Network](#chienliangliu2019)
+    - [Learning Representations for Time Series Clustering](#qianlima)
+    - [Multivariate LSTM-FCNs for time series classification](#fazlekarim)
+    - [Temporal representation learning for time series classification](#yupenghu)
+
 - [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
+
 - [Clustering Analysis](#cluster)
     - [Structural Deep Clustering Network](#deyubo)
+
 - [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
+
 - [Feature Interaction/Selection](#featureis)
+
 - [Computer Vision (CV)](#cv)
-    - (1) Image Classification/Detection/Applications/Networks
+    - **Part 1:** Image Classification/Detection/Applications/Networks
     - [ImageNet Classification With Deep Convolutional Neural Networks](#alex2012)
     - [Temporal Convolutional Networks for Action Segmentation and Detection](#colin2017)
     - [Network in Network](#minlin2014)
@@ -35,7 +44,7 @@
     - [Fully Convolutional Networks for Semantic Segmentation](#evan2017)
     - [Very deep convolutional networks for large-scale image recognition](#karen2015)
     - []()
-    - (2) Image Representation Learning ((Dis)entangled)
+    - **Part 2:**  Image Representation Learning ((Dis)entangled)
     - [Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations](#francesco2019)
     - [Disentangling by Factorising ](#hyunjik2018)
     - [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#xichen2016)
@@ -50,7 +59,9 @@
     - [Dilated Recurrent Neural Networks](#shiyuchang2017)
     - [An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling](#shaojiebai)
     - (2) Words Representation Learning
+
 - [Recommender Systems](#rs)
+
 - [Fault Diagnosis and Detection](#fdd)
     - [Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network](#zhongxuhu2020)
 - [Valve Stiction](#valve)
@@ -164,6 +175,31 @@
     - IEEE Transactions on Industrial Electronics. 2019, 66(6), 4788-4797
     - Time series classification is an important research topic in machine learning and data mining communities, since time series data exist in many application domains. Recent studies have shown that machine learning algorithms could benefit from good feature representation, explaining why deep learning has achieved breakthrough performance in many tasks. In deep learning, the convolutional neural network (CNN) is one of the most well-known approaches, since it incorporates feature learning and classification task in a unified network architecture. Although CNN has been successfully applied to image and text domains, it is still a challenge to apply CNN to time series data. This paper proposes a tensor scheme along with a novel deep learning architecture called multivariate convolutional neural network (MVCNN) for multivariate time series classification, in which the proposed architecture considers multivariate and lag-feature characteristics. We evaluate our proposed method with the prognostics and health management (PHM) 2015 challenge data, and compare with several algorithms. The experimental results indicate that the proposed method outperforms the other alternatives using the prediction score, which is the evaluation metric used by the PHM Society 2015 data challenge. Besides performance evaluation, we provide detailed analysis about the proposed method.
     - 提出一种多变量卷积框架用于多维时序数据的分类，该框架包含4个部分，Input tensor transformation stage，Univariate convolution stage，Multivariate convolution stage，Fully connected stage。最终的测试数据为PHM 2015 challenge 
+
+<span id="qianlima"> </span>
+- *Learning Representations for Time Series Clustering* [^^^](#return)
+    - Qianli Ma, Jiawei Zheng, Sen Li, Garrison W. Cottrell
+    - https://papers.nips.cc/paper/2019/hash/1359aa933b48b754a2f54adb688bfa77-Abstract.html
+    - https://github.com/qianlima-lab/DTCR
+    - Part of Advances in Neural Information Processing Systems 32 (NeurIPS 2019)
+    - Time series clustering is an essential unsupervised technique in cases when category information is not available. It has been widely applied to genome data, anomaly detection, and in general, in any domain where pattern detection is important. Although feature-based time series clustering methods are robust to noise and outliers, and can reduce the dimensionality of the data, they typically rely on domain knowledge to manually construct high-quality features. Sequence to sequence (seq2seq) models can learn representations from sequence data in an unsupervised manner by designing appropriate learning objectives, such as reconstruction and context prediction. When applying seq2seq to time series clustering, obtaining a representation that effectively represents the temporal dynamics of the sequence, multi-scale features, and good clustering properties remains a challenge. How to best improve the ability of the encoder is still an open question. Here we propose a novel unsupervised temporal representation learning model, named Deep Temporal Clustering Representation (DTCR), which integrates the temporal reconstruction and K-means objective into the seq2seq model. This approach leads to improved cluster structures and thus obtains cluster-specific temporal representations. Also, to enhance the ability of encoder, we propose a fake-sample generation strategy and auxiliary classification task. Experiments conducted on extensive time series datasets show that DTCR is state-of-the-art compared to existing methods. The visualization analysis not only shows the effectiveness of cluster-specific representation but also shows the learning process is robust, even if K-means makes mistakes
+    - DTCR integrates temporal reconstruction and the K-means objective into a seq2seq model. 融合重构误差和Kmeans损失到Seq2Seq 模型，提出Deep Tempo- ral Clustering Representation (DTCR)，生成一种面向聚类的temproral represeantaions. 采用随机打乱时间步来构建假样本，通过对真假样本的识别，进一步提高表征能力，总的Loss包含三个部分：重构，分类，聚类，参考公式9。
+
+<span id="fazlekarim"> </span>
+- *Multivariate LSTM-FCNs for time series classification*
+    - https://www.sciencedirect.com/science/article/pii/S0893608019301200
+    - Fazle Karim, Somshubra Majumdar, Houshang Darabi, Samuel Harford
+    - Neural Networks, Volume 116, August 2019, Pages 237-245
+    - Over the past decade, multivariate time series classification has received great attention. We propose transforming the existing univariate time series classification models, the Long Short Term Memory Fully Convolutional Network (LSTM-FCN) and Attention LSTM-FCN (ALSTM-FCN), into a multivariate time series classification model by augmenting the fully convolutional block with a squeeze-and-excitation block to further improve accuracy. Our proposed models outperform most state-of-the-art models while requiring minimum preprocessing. The proposed models work efficiently on various complex multivariate time series classification tasks such as activity recognition or action recognition. Furthermore, the proposed models are highly efficient at test time and small enough to deploy on memory constrained systems.
+    - 有监督，提出一种MLSTM-FCN结构，实现多变量时序分类。
+    
+<span id="yupenghu"> </span>
+- *Temporal representation learning for time series classification*
+    - https://link.springer.com/article/10.1007/s00521-020-05179-w
+    - Yupeng Hu, Peng Zhan, Yang Xu, Jia Zhao, Yujun Li, Xueqing Li 
+    - Neural Computing and Applications, 2020
+    - Recent years have witnessed the exponential growth of time series data as the popularity of sensing devices and development of IoT techniques; time series classification has been considered as one of the most challenging studies in time series data mining, attracting great interest over the last two decades. According to the empirical evidences, temporal representation learning-based time series classification has more superiority of accuracy, efficiency and interpretability as compared to hundreds of existing time series classification methods. However, due to the high time complexity of feature process, the performance of these methods has been severely restricted. In this paper, we first presented an efficient shapelet transformation method to improve the overall efficiency of time series classification, and then, we further developed a novel enhanced recurrent neural network model for deep representation learning to further improve the classification accuracy. Experimental results on typical real-world datasets have justified the superiority of our models over several shallow and deep representation learning competitors.
+    - 1.提出一种有效的 shapelet transformation， 设定一段序列的变化点turning points (TP), 计算每个TP的重要度，选取一定比例的TP可以重构时序，TP可以反映整个序列的趋势。 2.将原始序列按照滑动窗口进行分割，再送入Bi-LSTM模型中
 
 ----
 <span id="anomaly"> </span>
