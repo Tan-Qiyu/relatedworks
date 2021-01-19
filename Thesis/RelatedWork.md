@@ -21,6 +21,7 @@
     - [Learning Representations for Time Series Clustering](#qianlima)
     - [Multivariate LSTM-FCNs for time series classification](#fazlekarim)
     - [Temporal representation learning for time series classification](#yupenghu)
+    - [Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features](#naveensai)
 
 - [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
@@ -64,6 +65,7 @@
 
 - [Fault Diagnosis and Detection](#fdd)
     - [Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network](#zhongxuhu2020)
+    
 - [Valve Stiction](#valve)
 
 
@@ -134,7 +136,7 @@
 - *Unsupervised Classification of Multivariate Time Series Using VPCA and Fuzzy Clustering with Spatial Weighted Matrix Distance* [^^^](#return)
     - https://ieeexplore.ieee.org/document/8573123
     - Hong He; Yonghong Tan
-    - IEEE Transactions on Cybernetics, Volume: 50, Issue: 3, 1096 - 1105
+    - IEEE Transactions on Cybernetics, 2020, Volume: 50, Issue: 3, 1096 - 1105
     - Due to high dimensionality and multiple variables, unsupervised classification of multivariate time series (MTS) involves more challenging problems than those of univariate ones. Unlike the vectorization of a feature matrix in traditional clustering algorithms, an unsupervised pattern recognition scheme based on matrix data is proposed for MTS samples in this paper. To reduce the computational load and time consumption, a novel variable-based principal component analysis (VPCA) is first devised for the dimensionality reduction of MTS samples. Afterward, a spatial weighted matrix distancebased fuzzy clustering (SWMDFC) algorithm is proposed to directly group MTS samples into clusters as well as preserve the structure of the data matrix. The spatial weighted matrix distance (SWMD) integrates the spatial dimensionality difference of elements of data into the distance of MST pairs. In terms of the SWMD, the MTS samples are clustered without vectorization in the dimensionality-reduced feature matrix space. Finally, three open-access datasets are utilized for the validation of the proposed unsupervised classification scheme. The results show that the VPCA can capture more features of MTS data than principal component analysis (PCA) and 2-D PCA. Furthermore, the clustering performance of SWMDFC is superior to that of fuzzy c-means clustering algorithms based on the Euclidean distance or image Euclidean distance.
     - 提出一种基于矩阵数据的无监督识别方案。基于Variable PCA实现对原始时序数据的表征，利用Spatial-Weighted Matrix Distance 来度量不同表征的之间的距离，从而基于fuzzy实现无监督的分类。VPCA没有在特征维度上进行降维，而是在数据长度上进行了降维。SWMD是一种度量矩阵间距离的方式
 
@@ -186,7 +188,7 @@
     - DTCR integrates temporal reconstruction and the K-means objective into a seq2seq model. 融合重构误差和Kmeans损失到Seq2Seq 模型，提出Deep Tempo- ral Clustering Representation (DTCR)，生成一种面向聚类的temproral represeantaions. 采用随机打乱时间步来构建假样本，通过对真假样本的识别，进一步提高表征能力，总的Loss包含三个部分：重构，分类，聚类，参考公式9。
 
 <span id="fazlekarim"> </span>
-- *Multivariate LSTM-FCNs for time series classification*
+- *Multivariate LSTM-FCNs for time series classification* [^^^](#return)
     - https://www.sciencedirect.com/science/article/pii/S0893608019301200
     - Fazle Karim, Somshubra Majumdar, Houshang Darabi, Samuel Harford
     - Neural Networks, Volume 116, August 2019, Pages 237-245
@@ -194,12 +196,20 @@
     - 有监督，提出一种MLSTM-FCN结构，实现多变量时序分类。
     
 <span id="yupenghu"> </span>
-- *Temporal representation learning for time series classification*
+- *Temporal representation learning for time series classification* [^^^](#return)
     - https://link.springer.com/article/10.1007/s00521-020-05179-w
     - Yupeng Hu, Peng Zhan, Yang Xu, Jia Zhao, Yujun Li, Xueqing Li 
     - Neural Computing and Applications, 2020
     - Recent years have witnessed the exponential growth of time series data as the popularity of sensing devices and development of IoT techniques; time series classification has been considered as one of the most challenging studies in time series data mining, attracting great interest over the last two decades. According to the empirical evidences, temporal representation learning-based time series classification has more superiority of accuracy, efficiency and interpretability as compared to hundreds of existing time series classification methods. However, due to the high time complexity of feature process, the performance of these methods has been severely restricted. In this paper, we first presented an efficient shapelet transformation method to improve the overall efficiency of time series classification, and then, we further developed a novel enhanced recurrent neural network model for deep representation learning to further improve the classification accuracy. Experimental results on typical real-world datasets have justified the superiority of our models over several shallow and deep representation learning competitors.
     - 1.提出一种有效的 shapelet transformation， 设定一段序列的变化点turning points (TP), 计算每个TP的重要度，选取一定比例的TP可以重构时序，TP可以反映整个序列的趋势。 2.将原始序列按照滑动窗口进行分割，再送入Bi-LSTM模型中
+
+<span id="naveensai"> </span>
+- *Deep Temporal Clustering: Fully Unsupervised Learning of Time-Domain Features* [^^^](#return)
+    - https://arxiv.org/abs/1802.01059
+    - Naveen Sai Madiraju, Seid M. Sadat, Dimitry Fisher, Homa Karimabadi
+    - arXiv:1802.01059, February 2018
+    - Unsupervised learning of time series data, also known as temporal clustering, is a challenging problem in machine learning. Here we propose a novel algorithm, Deep Temporal Clustering (DTC), to naturally integrate dimensionality reduction and temporal clustering into a single end-to-end learning framework, fully unsupervised. The algorithm utilizes an autoencoder for temporal dimensionality reduction and a novel temporal clustering layer for cluster assignment. Then it jointly optimizes the clustering objective and the dimensionality reduction objec tive. Based on requirement and application, the temporal clustering layer can be customized with any temporal similarity metric. Several similarity metrics and state-of-the-art algorithms are considered and compared. To gain insight into temporal features that the network has learned for its clustering, we apply a visualization method that generates a region of interest heatmap for the time series. The viability of the algorithm is demonstrated using time series data from diverse domains, ranging from earthquakes to spacecraft sensor data. In each case, we show that the proposed algorithm outperforms traditional methods. The superior performance is attributed to the fully integrated temporal dimensionality reduction and clustering criterion.
+    - 提出deep temporal clustering (DTC) 将降维和时间聚类融合到一个端到端的框架，完全无监督。利用自编码器实现降维，设计了一个新的聚类层，聚类层可以使用任意的temporal similarity metric，提供了可视化方法。
 
 ----
 <span id="anomaly"> </span>
