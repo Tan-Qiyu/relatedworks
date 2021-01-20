@@ -30,6 +30,7 @@
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
 | Structural Deep Clustering Network | WWW | 2020 | https://dl.acm.org/doi/10.1145/3366423.3380214 |
+|Unsupervised deep embedding for clustering analysis|ICML|2016|https://dl.acm.org/doi/10.5555/3045390.3045442|
 
 
 

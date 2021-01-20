@@ -28,6 +28,7 @@
 
 - [Clustering Analysis](#cluster)
     - [Structural Deep Clustering Network](#deyubo)
+    - [Unsupervised deep embedding for clustering analysis](#junyuanxie)
 
 - [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
@@ -235,6 +236,15 @@
     - WWW '20: Proceedings of The Web Conference 2020, April 2020, Pages 1400–1410
     - Clustering is a fundamental task in data analysis. Recently, deep clustering, which derives inspiration primarily from deep learning approaches, achieves state-of-the-art performance and has attracted considerable attention. Current deep clustering methods usually boost the clustering results by means of the powerful representation ability of deep learning, e.g., autoencoder, suggesting that learning an effective representation for clustering is a crucial requirement. The strength of deep clustering methods is to extract the useful representations from the data itself, rather than the structure of data, which receives scarce attention in representation learning. Motivated by the great success of Graph Convolutional Network (GCN) in encoding the graph structure, we propose a Structural Deep Clustering Network (SDCN) to integrate the structural information into deep clustering. Specifically, we design a delivery operator to transfer the representations learned by autoencoder to the corresponding GCN layer, and a dual self-supervised mechanism to unify these two different deep neural architectures and guide the update of the whole model. In this way, the multiple structures of data, from low-order to high-order, are naturally combined with the multiple representations learned by autoencoder. Furthermore, we theoretically analyze the delivery operator, i.e., with the delivery operator, GCN improves the autoencoder-specific representation as a high-order graph regularization constraint and autoencoder helps alleviate the over-smoothing problem in GCN. Through comprehensive experiments, we demonstrate that our propose model can consistently perform better over the state-of-the-art techniques.
     - 基于自编码器和图网络进行特征表征学习，分两路，一路是用自编码器得到每层编码的特征H， 另一路是用GCN进行表征学习结构化特征Z，在GCN和AE的每层进行交互 ，参考公式（6），提出一种对偶自监督模块。 损失函数为类别的目标分布与网络计算分布的差异，用KL散度衡量，具体参考文章3.4节。Target distribution 通过计算得出。
+
+<span id="junyuanxie"> </span>
+- *Unsupervised deep embedding for clustering analysis* [^^^](#return)
+    - https://dl.acm.org/doi/10.5555/3045390.3045442
+    - Junyuan Xie, Ross Girshick, Ali Farhadi
+    - ICML'16: Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 June 2016 Pages 478–487
+    - Clustering is central to many data-driven application domains and has been studied extensively in terms of distance functions and grouping algorithms. Relatively little work has focused on learning representations for clustering. In this paper, we propose Deep Embedded Clustering (DEC), a method that simultaneously learns feature representations and cluster assignments using deep neural networks. DEC learns a mapping from the data space to a lower-dimensional feature space in which it iteratively optimizes a clustering objective. Our experimental evaluations on image and text corpora show significant improvement over state-of-the-art methods.
+    - 高提出深度嵌入聚类(Deep Embedded Clustering), 第一步度量嵌入表征与给定的聚类中心，第二步更新模型参数以及聚类中心基于额外的目标分布。核心在于如何定义target distribution P, 期望分布具有以下特性：强预测即聚类纯度要高、将更多的数据划分为高置信度：正则化损失贡献避免大的类别破坏隐特征空间。评价指标选择为ACC。在实验部分对多种因素进行了讨论。
+ 
 
 ---
 <span id="featureis"> </span>
