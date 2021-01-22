@@ -68,10 +68,25 @@
     - [Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network](#zhongxuhu2020)
     - [Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis](#haowu)
 
+
+<span id="returnvalve"> </span>
+
 - [Valve Stiction](#valve)
-
-
-
+    - Detection and Quantification
+    - [A Curve Fitting Method for Detecting Valve Stiction in Oscillating Control Loops](#qpeterhe)
+    - [A simple model-free butterfly shape-based detection (BSD) method integrated with deep learning CNN for valve stiction detection and quantification](#kamaruddin)
+    - [Valve stiction detection through improved pattern recognition using neural networks](#ahmad)
+    - [A shape-analysis approach for diagnosis of stiction in control valves](#torecep2011)
+    - [A simple method for detecting valve stiction in oscillating control loops](#ashishjpc2005)
+    - [A simple method for detection of stiction in control valves](#alexandercep99)
+    - [An automatic method for detection of valve stiction in process control loops](#yoshiyukicep06)
+    - [An autonomous valve stiction detection system based on data characterization](#alexeyzakharovcep13)
+    - [An improved algorithm for automatic quantification of valve stiction in flow control loops](#marcoant10)
+    - [An improved qualitative shape analysis technique for automatic detection of valve stiction in flow control loops](#claudio2008)
+    - [Automatic detection and quantification of stiction in control valves](#mmashoukatcep06)
+    - [Data and Reliability Characterization Strategy for Automatic Detection of Valve Stiction in Control Loops](#octaviopozotcst)
+    - Compensation and Control
+    - []
 ----
 <span id="tsrcf"> </span>
 > ## **Time Series Representation/Classification/Forecasting**
@@ -482,13 +497,90 @@
 <span id="valve"> </span>
 > ## **Valve Stiction**
 >> ### Detection and Quantification
-- *A Curve Fitting Method for Detecting Valve Stiction in Oscillating Control Loops* [^^^](#return)
+<span id="qpeterhe"> </span>
+- *A Curve Fitting Method for Detecting Valve Stiction in Oscillating Control Loops* [^^^](#returnvalve)
      - https://pubs.acs.org/doi/10.1021/ie061219a 
      - Q. Peter He, Jin Wang, Martin Pottmann, S. Joe Qin
      - Industrial & Engineering Chemistry Research. Ind. Eng. Chem. Res. 2007, 46, 13, 4549–4560
      - Many control loops in process plants perform poorly because of valve stiction as one of the most common equipment problems. Valve stiction may cause oscillation in control loops, which increases variability in product quality, accelerates equipment wear, or leads to control system instability and other issues that potentially disrupt the operation. In this work, data-driven valve stiction models are first reviewed and a simplified model is presented. Next, a stiction detection method is proposed based on curve fitting of the output signal of the first integrating component after the valve, i.e., the controller output for self-regulating processes or the process output for integrating processes. A metric that is called the stiction index (SI) is introduced, based on the proposed method to facilitate the automatic detection of valve stiction. The effectiveness of the proposed method is demonstrated using both simulated data sets based on the proposed valve stiction model and real industrial data sets.
-    - 
 
+<span id="kamaruddin"> </span>
+- *A simple model-free butterfly shape-based detection (BSD) method integrated with deep learning CNN for valve stiction detection and quantification* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0959152419304639
+    - B.Kamaruddin H.Zabiri, A .A .A . Mohd Amiruddin, W.K. Teh, M. Ramasamy , S.S. Jeremiah
+    - Journal of Process Control, Volume 87, March 2020, Pages 1-16
+    - Control valve stiction is a long-standing problem within process industries. In most methods for shape-based stiction detection, they rely heavily on the traditional controller output (OP) and process variable (PV) plot (i.e. PV-OP plot) that tends to produce an “elliptical” shape which is the widely acknowledged pattern indication for the presence of stiction. However, many of the methods suffered from unsatisfactory generalization capability when subjected to different loop dynamics. In this paper, a “butterfly” shape derived from the manipulation of the standard PV and OP data, which is more robust towards different loop dynamics, is developed for stiction detection. This simple model-free butterfly shape-based detection (BSD) method uses Stenman's one parameter stiction model, which results in a distinctive ‘butterfly’ pattern in the presence of stiction. The proposed BSD is tested on simulated data, as well as 26 benchmark industrial case studies and has shown a relatively higher generalization capability with relatively higher successful detection rate on stiction loops and on non-stiction loops. A simple quantification algorithm based on BSD-convolutional neural network (BSD-CNN) framework is then developed to quantify the stiction severity. Based on the 15 benchmark industrial loops with stiction, the proposed BSD-CNN quantification algorithm has shown reasonable accuracy when compared to other published quantification methods in literature.
+    - 一种基于卷积网络的阀门粘滞检测和定量，采用butterfly shape-based的二维图像。
+
+<span id="ahmad"> </span>
+- *Valve stiction detection through improved pattern recognition using neural networks* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066119300838
+    - Ahmad Azharuddin Azhari Mohd Amiruddin, Haslinda Zabiri, Sean Suraj Jeremiah, Weng Kean Teh, Bashariah Kamaruddin
+    - Control Engineering Practice, Volume 90, September 2019, Pages 63-84
+    - A non-invasive method for detecting valves suffering from stiction using multi-layer feed-forward neural networks (NN) is proposed, via a simple class-based diagnosis. The proposed Stiction Detection Network (SDN) uses a transformation of PV (process variable) and OP (controller output) operational data. Verification of the proposed SDN model’s detection accuracy is done through cross-validation with generated samples and benchmarking with various industrial loops. The industrial loop benchmark predictions of the proposed SDN method has a combined accuracy of 78% (75% in predicting stiction, and 81% for non-stiction) in predicting loop condition, matching capabilities of other established methods in accurately predicting realistic industrial loops suffering from stiction, while also being applicable to all types of oscillatory control signals.
+
+<span id="torecep2011"> </span>
+- *A shape-analysis approach for diagnosis of stiction in control valves* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066111000438
+    - Tore Hägglund
+    - Control Engineering Practice, Volume 19, Issue 8, August 2011, Pages 782-789
+    - The paper describes a method for automatic diagnosis of stiction in control valves. The diagnosis is performed using a shape analysis of the wave form of the oscillations that appear in the process output during stick–slip motion. The procedure is automatic in the sense that no process information is assumed except the one that is already available in the controllers. The procedure can be used both online and off-line. Results from industrial tests are provided in the paper.
+
+<span id="ashishjpc2005"> </span>
+- *A simple method for detecting valve stiction in oscillating control loops* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0959152404001106
+    - Ashish Singhal, Timothy I. Salsbury
+    - Journal of Process Control, Volume 15, Issue 4, June 2005, Pages 371-382
+    - This paper presents a simple and new method for detecting valve stiction in an oscillating control loop. The method is based on the calculation of areas before and after the peak of an oscillating signal. The proposed method is intuitive, requires very little computational effort, and is easy to implement online. Analytical results are derived to show the theoretical basis of the new method and field results are presented to show its effectiveness on real world control loops.
+
+<span id="alexandercep99"> </span>
+- *A simple method for detection of stiction in control valves* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066199001008
+    - Alexander Horch
+    - Control Engineering Practice, Volume 7, Issue 10, October 1999, Pages 1221-1231
+    - A simple method diagnosing oscillations in process control loops is presented. The new method is based on the cross-correlation between control input and process output and it is shown to correctly distinguish between two important reasons for oscillations in control loops in the process industry, namely external oscillating disturbances and static friction (stiction) in control valves.
+
+<span id="yoshiyukicep06"> </span>
+- *An automatic method for detection of valve stiction in process control loops* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066105000833
+    - Yoshiyuki Yamashita
+    - Control Engineering Practice, Volume 14, Issue 5, May 2006, Pages 503-510
+    - Oscillations in process control loops present a common problem. This paper proposes a new algorithm to detect valve stiction for diagnosis of oscillation. Formalism for the qualitative description of input–output characteristics of a valve is also proposed for implementation of the detection algorithm. The method was evaluated on several industrial data sets. It showed excellent performance for detection of stiction. 
+
+<span id="alexeyzakharovcep13"> </span>
+- *An autonomous valve stiction detection system based on data characterization* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066113001342
+    - Alexey Zakharov, Elena Zattoni, Lei Xie, Octavio Pozo Garcia, Sirkka-Liisa Jämsä-Jounela
+    - Control Engineering Practice, Volume 21, Issue 11, November 2013, Pages 1507-1518
+    - This paper proposes a valve stiction detection system which selects valve stiction detection algorithms based on characterizations of the data. For this purpose, novel data feature indexes are proposed, which quantify the presence of oscillations, mean-nonstationarity, noise and nonlinearities in a given data sequence. The selection is then performed according to the conditions on the index values in which each method can be applied successfully. Finally, the stiction detection decision is given by combining the detection decisions made by the selected methods. The paper ends demonstrating the effectiveness of the proposed valve stiction detection system with benchmark industrial data.
+
+<span id="marcoant10"> </span>
+- *An improved algorithm for automatic quantification of valve stiction in flow control loops* [^^^](#returnvalve)
+    - https://ieeexplore.ieee.org/document/5472674
+    - Marco Antônio de Souza L. Cuadros, Celso J. Munaro, Saul Munareto
+    - 2010 IEEE International Conference on Industrial Technology, 2010
+    - Stiction is a common cause of loop performance deterioration. The presence of stiction in the spring-diaphragm type valve is the most frequently found valve problem in the process industry. Methods have been proposed fitting an ellipse to the PV-OP plot and the maximum width of the ellipse is reported as "apparent stiction". An improvement on these methods is here proposed for situations where the PV-OP plot is similar to a parallelogram, resulting in a better estimation of stiction. The application of this quantification algorithm together with the cross-correlation detection method to several examples is used to demonstrate the superiority of the proposed approach.
+
+<span id="claudio2008"> </span>
+- *An improved qualitative shape analysis technique for automatic detection of valve stiction in flow control loops* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066108000798
+    - Claudio Scali, Claudio Ghelardoni
+    - Control Engineering Practice, Volume 16, Issue 12, December 2008, Pages 1501-1508
+    - Valve stiction is a frequent cause of loop performance deterioration and in recent literature many techniques have been proposed for its automatic detection. Yamashita [(2006). An automatic method for detection of valve stiction in process control loops. Control Engineering Practice, 14, 503–510] proposes a method based on qualitative shape analysis, which is very effective for flow control loops where the valve position (or the proportional flow rate) is available as measurement. However, additional stiction patterns observed in industrial data are not included in the original algorithm. This paper provides an analysis and explanation of these patterns on the basis of valve type, loop dynamics and control system setup, by means of simulation and comparison with industrial data. The technique is then extended and applied to a plant data set in order to show the improved efficiency in detecting stiction.  
+
+<span id="mmashoukatcep06"> </span>
+- *Automatic detection and quantification of stiction in control valves* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0967066105002388
+    - M.A.A. Shoukat Choudhury, S.L. Shah, N.F. Thornhill, David S. Shook
+    - Control Engineering Practice, Volume 14, Issue 12, December 2006, Pages 1395-1412
+    - Stiction is a common problem in spring-diaphragm type valves, which are widely used in the process industry. Although there have been many attempts to understand and detect stiction in control valves, none of the current methods can simultaneously detect and quantify stiction. Conventional invasive methods such as the valve travel test can easily detect stiction, but are expensive and tedious to apply to hundreds of valves to detect stiction. Thus there is a clear need in the process industry for a non-invasive method that can not only detect but also quantify stiction so that the valves that need repair or maintenance can be identified, isolated and repaired. This work describes a model free method that can detect and quantify stiction that may be present in control valves using routine operating data obtained from the process. No additional excitation or experimentation of the plant is required. Over a dozen industrial case studies have demonstrated the wide applicability and practicality of this method as an useful diagnostic aid in control loop performance monitoring.
+
+<span id="octaviopozotcst"> </span>
+- *Data and Reliability Characterization Strategy for Automatic Detection of Valve Stiction in Control Loops* [^^^](#returnvalve)
+    - https://ieeexplore.ieee.org/document/7505905
+    - Octavio Pozo Garcia, Alexey Zakharov, Sirkka-Liisa Jämsä-Jounela
+    - IEEE Transactions on Control Systems Technology ( Volume: 25, Issue: 3, May 2017), 769 - 780
+    - Automatic detection of process faults requires process expertise to determine the fault symptoms and mathematical algorithms that can classify these symptoms correctly. Thus, the effectiveness of any automatic detection system can degrade because of inconsistencies in the process data and variations in the assumed symptoms of the fault. This paper presents a novel detection strategy based on the data characterization and reliability analysis. In more detail, at first process data are profiled to automatically select and apply the most suitable detection algorithms. Then, the reliability of the detection decisions made by the selected detection algorithms is evaluated, considering a decision unreliable when the process data fit neither the healthy case nor the faulty case assumed by the method. The strategy is applied to a valve stiction detection system. In addition, an exponential fitting method, recognizing three oscillation patterns associated with stiction, is proposed and incorporated into the system. The resulting system was tested on a benchmark data, and the results are discussed.
 
 >> ### Compensation and Control
 

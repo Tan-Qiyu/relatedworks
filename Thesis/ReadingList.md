@@ -57,6 +57,19 @@
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
 |A Curve Fitting Method for Detecting Valve Stiction in Oscillating Control Loops|Industrial & Engineering Chemistry Research|2007|[paper](https://pubs.acs.org/doi/10.1021/ie061219a)|
+|A simple model-free butterfly shape-based detection (BSD) method integrated with deep learning CNN for valve stiction detection and quantification|Journal of Process Control|2020|[paper](https://www.sciencedirect.com/science/article/pii/S0959152419304639)|
+|Valve stiction detection through improved pattern recognition using neural networks|Control Engineering Practice|2019|[paper](https://www.sciencedirect.com/science/article/pii/S0967066119300838)|
+|A shape-analysis approach for diagnosis of stiction in control valves|Control Engineering Practice|2011|[paper](https://www.sciencedirect.com/science/article/pii/S0967066111000438)|
+|A simple method for detecting valve stiction in oscillating control loops|Journal of Process Control|2005|[paper](https://www.sciencedirect.com/science/article/pii/S0959152404001106)|
+|A simple method for detection of stiction in control valves|Control Engineering Practice|1999|[paper](https://www.sciencedirect.com/science/article/pii/S0967066199001008)|
+|An automatic method for detection of valve stiction in process control loops|Control Engineering Practice|2006|[paper](https://www.sciencedirect.com/science/article/pii/S0967066105000833)|
+|An autonomous valve stiction detection system based on data characterization|Control Engineering Practice|2013|[paper](https://www.sciencedirect.com/science/article/pii/S0967066113001342)|
+|An improved algorithm for automatic quantification of valve stiction in flow control loops|IEEE International Conference on Industrial Technology|2010|[paper](https://ieeexplore.ieee.org/document/5472674)|
+|An improved qualitative shape analysis technique for automatic detection of valve stiction in flow control loops|Control Engineering Practice|2008|[paper](https://www.sciencedirect.com/science/article/pii/S0967066108000798)|
+|Automatic detection and quantification of stiction in control valves|Control Engineering Practice|2006|[paper](https://www.sciencedirect.com/science/article/pii/S0967066105002388)|
+|Data and Reliability Characterization Strategy for Automatic Detection of Valve Stiction in Control Loops|IEEE Transactions on Control Systems Technology|2017|[paper](https://ieeexplore.ieee.org/document/7505905)|
+
+
 >> ### Part2: Compensation and Control  
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
