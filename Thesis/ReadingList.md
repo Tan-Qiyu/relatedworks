@@ -32,8 +32,6 @@
 | Structural Deep Clustering Network | WWW | 2020 |[paper](https://dl.acm.org/doi/10.1145/3366423.3380214)|
 |Unsupervised deep embedding for clustering analysis|ICML|2016|[paper](https://dl.acm.org/doi/10.5555/3045390.3045442)|
 
-
-
 > ## Coumpter Vision (CV)
 
 >> ### Part 1: Image Classification/Detection/Applications/Networks
@@ -49,7 +47,10 @@
 > ## Fault Diagnosis and Detection
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
-|Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis|Computers and Chemical Engineering|2018|[paper](https://www.sciencedirect.com/science/article/pii/S0098135418302990?via%3Dihub)|
+|Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8704327)|
+|Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis|Computers & Chemical Engineering|2018|[paper](https://www.sciencedirect.com/science/article/pii/S0098135418302990)|
+|A deep belief network based fault diagnosis model for complex chemical processes|Computers & Chemical Engineering|2017|[paper](https://www.sciencedirect.com/science/article/pii/S0098135417301059)|
+
 > ## Valve Stiction
 
 >> ### Part1: Detection and Quantification  

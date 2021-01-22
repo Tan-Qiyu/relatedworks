@@ -465,9 +465,18 @@
 - *Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis* [^^^](#return)
     - https://www.sciencedirect.com/science/article/pii/S0098135418302990?via%3Dihub
     - Hao Wu, Jinsong Zhao
-    - Computers and Chemical Engineering, Volume 115, 12 July 2018, Pages 185-197
+    - Computers & Chemical Engineering, Volume 115, 12 July 2018, Pages 185-197
     - Numerous accidents in chemical processes have caused emergency shutdowns, property losses, casualties and/or environmental disruptions in the chemical process industry. Fault detection and diagnosis (FDD) can help operators timely detect and diagnose abnormal situations, and take right actions to avoid ad- verse consequences. However, FDD is still far from widely practical applications. Over the past few years, deep convolutional neural network (DCNN) has shown excellent performance on machine-learning tasks. In this paper, a fault diagnosis method based on a DCNN model consisting of convolutional layers, pooling layers, dropout, fully connected layers is proposed for chemical process fault diagnosis. The benchmark Tennessee Eastman (TE) process is utilized to verify the outstanding performance of the fault diagnosis method.
-    - 卷积网络用于TE Process，
+    - 卷积网络用于TE Process，主要是看如何仿真TE Process, t-SNE 可用来可视化
+
+<span id= ""> </span>
+- *A deep belief network based fault diagnosis model for complex chemical processes* [^^^](#return)
+    - https://www.sciencedirect.com/science/article/pii/S0098135417301059
+    - Zhanpeng Zhang, Jinsong Zhao
+    - Computers & Chemical Engineering, Volume 107, 5 December 2017, Pages 395-407
+    - Data-driven methods have been regarded as desirable methods for fault detection and diagnosis (FDD) of practical chemical processes. However, with the big data era coming, how to effectively extract and present fault features is one of the keys to successful industrial applications of FDD technologies. In this paper, an extensible deep belief network (DBN) based fault diagnosis model is proposed. Individual fault features in both spatial and temporal domains are extracted by DBN sub-networks, aided by the mutual information technology. A global two-layer back-propagation network is trained and used for fault classification. In the final part of this paper, the benchmarked Tennessee Eastman process is utilized to illustrate the performance of the DBN based fault diagnosis model.
+    - 深度置信网络用于提取故障特征，参考如何仿真TE Process
+
 
 ---
 <span id="valve"> </span>
