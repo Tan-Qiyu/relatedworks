@@ -66,7 +66,8 @@
 
 - [Fault Diagnosis and Detection](#fdd)
     - [Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network](#zhongxuhu2020)
-    
+    - [Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis](#haowu)
+
 - [Valve Stiction](#valve)
 
 
@@ -460,9 +461,13 @@
     - 本质上是对原始数据进行压缩，乘以一个压缩矩阵，实际上是个映射，Multiplying the original signal by the observation matrix increases the spacing between data
     - 针对单变量，缺乏temporal information，且需要label
 
-
-
-
+<span id="haowu"> </span>
+- *Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis* [^^^](#return)
+    - https://www.sciencedirect.com/science/article/pii/S0098135418302990?via%3Dihub
+    - Hao Wu, Jinsong Zhao
+    - Computers and Chemical Engineering, Volume 115, 12 July 2018, Pages 185-197
+    - Numerous accidents in chemical processes have caused emergency shutdowns, property losses, casualties and/or environmental disruptions in the chemical process industry. Fault detection and diagnosis (FDD) can help operators timely detect and diagnose abnormal situations, and take right actions to avoid ad- verse consequences. However, FDD is still far from widely practical applications. Over the past few years, deep convolutional neural network (DCNN) has shown excellent performance on machine-learning tasks. In this paper, a fault diagnosis method based on a DCNN model consisting of convolutional layers, pooling layers, dropout, fully connected layers is proposed for chemical process fault diagnosis. The benchmark Tennessee Eastman (TE) process is utilized to verify the outstanding performance of the fault diagnosis method.
+    - 卷积网络用于TE Process，
 
 ---
 <span id="valve"> </span>
@@ -473,6 +478,8 @@
      - Q. Peter He, Jin Wang, Martin Pottmann, S. Joe Qin
      - Industrial & Engineering Chemistry Research. Ind. Eng. Chem. Res. 2007, 46, 13, 4549–4560
      - Many control loops in process plants perform poorly because of valve stiction as one of the most common equipment problems. Valve stiction may cause oscillation in control loops, which increases variability in product quality, accelerates equipment wear, or leads to control system instability and other issues that potentially disrupt the operation. In this work, data-driven valve stiction models are first reviewed and a simplified model is presented. Next, a stiction detection method is proposed based on curve fitting of the output signal of the first integrating component after the valve, i.e., the controller output for self-regulating processes or the process output for integrating processes. A metric that is called the stiction index (SI) is introduced, based on the proposed method to facilitate the automatic detection of valve stiction. The effectiveness of the proposed method is demonstrated using both simulated data sets based on the proposed valve stiction model and real industrial data sets.
+    - 
+
 
 >> ### Compensation and Control
 
