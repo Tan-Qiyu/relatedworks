@@ -21,7 +21,7 @@
     - [Learning Representations for Time Series Clustering](#qianlima)
     - [Multivariate LSTM-FCNs for time series classification](#fazlekarim)
     - [Temporal representation learning for time series classification](#yupenghu)
-    - [Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features](#naveensai)
+    - 
 
 - [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
@@ -29,6 +29,10 @@
 - [Clustering Analysis](#cluster)
     - [Structural Deep Clustering Network](#deyubo)
     - [Unsupervised deep embedding for clustering analysis](#junyuanxie)
+    - [Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features](#naveensai)
+    - [Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering](#boyangpmlr)
+    - [Improved deep embedded clustering with local structure preservation](#xifengguojicai17)
+
 
 - [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
@@ -220,13 +224,7 @@
     - Recent years have witnessed the exponential growth of time series data as the popularity of sensing devices and development of IoT techniques; time series classification has been considered as one of the most challenging studies in time series data mining, attracting great interest over the last two decades. According to the empirical evidences, temporal representation learning-based time series classification has more superiority of accuracy, efficiency and interpretability as compared to hundreds of existing time series classification methods. However, due to the high time complexity of feature process, the performance of these methods has been severely restricted. In this paper, we first presented an efficient shapelet transformation method to improve the overall efficiency of time series classification, and then, we further developed a novel enhanced recurrent neural network model for deep representation learning to further improve the classification accuracy. Experimental results on typical real-world datasets have justified the superiority of our models over several shallow and deep representation learning competitors.
     - 1.提出一种有效的 shapelet transformation， 设定一段序列的变化点turning points (TP), 计算每个TP的重要度，选取一定比例的TP可以重构时序，TP可以反映整个序列的趋势。 2.将原始序列按照滑动窗口进行分割，再送入Bi-LSTM模型中
 
-<span id="naveensai"> </span>
-- *Deep Temporal Clustering: Fully Unsupervised Learning of Time-Domain Features* [^^^](#return)
-    - https://arxiv.org/abs/1802.01059
-    - Naveen Sai Madiraju, Seid M. Sadat, Dimitry Fisher, Homa Karimabadi
-    - arXiv:1802.01059, February 2018
-    - Unsupervised learning of time series data, also known as temporal clustering, is a challenging problem in machine learning. Here we propose a novel algorithm, Deep Temporal Clustering (DTC), to naturally integrate dimensionality reduction and temporal clustering into a single end-to-end learning framework, fully unsupervised. The algorithm utilizes an autoencoder for temporal dimensionality reduction and a novel temporal clustering layer for cluster assignment. Then it jointly optimizes the clustering objective and the dimensionality reduction objec tive. Based on requirement and application, the temporal clustering layer can be customized with any temporal similarity metric. Several similarity metrics and state-of-the-art algorithms are considered and compared. To gain insight into temporal features that the network has learned for its clustering, we apply a visualization method that generates a region of interest heatmap for the time series. The viability of the algorithm is demonstrated using time series data from diverse domains, ranging from earthquakes to spacecraft sensor data. In each case, we show that the proposed algorithm outperforms traditional methods. The superior performance is attributed to the fully integrated temporal dimensionality reduction and clustering criterion.
-    - 提出deep temporal clustering (DTC) 将降维和时间聚类融合到一个端到端的框架，完全无监督。利用自编码器实现降维，设计了一个新的聚类层，聚类层可以使用任意的temporal similarity metric，提供了可视化方法。
+
 
 ----
 <span id="anomaly"> </span>
@@ -259,8 +257,35 @@
     - Junyuan Xie, Ross Girshick, Ali Farhadi
     - ICML'16: Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 June 2016 Pages 478–487
     - Clustering is central to many data-driven application domains and has been studied extensively in terms of distance functions and grouping algorithms. Relatively little work has focused on learning representations for clustering. In this paper, we propose Deep Embedded Clustering (DEC), a method that simultaneously learns feature representations and cluster assignments using deep neural networks. DEC learns a mapping from the data space to a lower-dimensional feature space in which it iteratively optimizes a clustering objective. Our experimental evaluations on image and text corpora show significant improvement over state-of-the-art methods.
-    - 高提出深度嵌入聚类(Deep Embedded Clustering), 第一步度量嵌入表征与给定的聚类中心，第二步更新模型参数以及聚类中心基于额外的目标分布。核心在于如何定义target distribution P, 期望分布具有以下特性：强预测即聚类纯度要高、将更多的数据划分为高置信度：正则化损失贡献避免大的类别破坏隐特征空间。评价指标选择为ACC。在实验部分对多种因素进行了讨论。
+    - 提出深度嵌入聚类(Deep Embedded Clustering), 第一步度量嵌入表征与给定的聚类中心，第二步更新模型参数以及聚类中心基于额外的目标分布。核心在于如何定义target distribution P, 期望分布具有以下特性：强预测即聚类纯度要高、将更多的数据划分为高置信度：正则化损失贡献避免大的类别破坏隐特征空间。评价指标选择为ACC。在实验部分对多种因素进行了讨论。
  
+
+<span id="naveensai"> </span>
+- *Deep Temporal Clustering: Fully Unsupervised Learning of Time-Domain Features* [^^^](#return)
+    - https://arxiv.org/abs/1802.01059
+    - Naveen Sai Madiraju, Seid M. Sadat, Dimitry Fisher, Homa Karimabadi
+    - arXiv:1802.01059, February 2018
+    - Unsupervised learning of time series data, also known as temporal clustering, is a challenging problem in machine learning. Here we propose a novel algorithm, Deep Temporal Clustering (DTC), to naturally integrate dimensionality reduction and temporal clustering into a single end-to-end learning framework, fully unsupervised. The algorithm utilizes an autoencoder for temporal dimensionality reduction and a novel temporal clustering layer for cluster assignment. Then it jointly optimizes the clustering objective and the dimensionality reduction objec tive. Based on requirement and application, the temporal clustering layer can be customized with any temporal similarity metric. Several similarity metrics and state-of-the-art algorithms are considered and compared. To gain insight into temporal features that the network has learned for its clustering, we apply a visualization method that generates a region of interest heatmap for the time series. The viability of the algorithm is demonstrated using time series data from diverse domains, ranging from earthquakes to spacecraft sensor data. In each case, we show that the proposed algorithm outperforms traditional methods. The superior performance is attributed to the fully integrated temporal dimensionality reduction and clustering criterion.
+    - 提出deep temporal clustering (DTC) 将降维和时间聚类融合到一个端到端的框架，完全无监督。利用自编码器实现降维，设计了一个新的聚类层，聚类层可以使用任意的temporal similarity metric，提供了可视化方法。
+
+<span id="boyangpmlr"> </span>
+- *Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering* [^^^](#return)
+    - http://proceedings.mlr.press/v70/yang17b.html
+    - Bo Yang, Xiao Fu, Nicholas D. Sidiropoulos, Mingyi Hong
+    - Proceedings of the 34th International Conference on Machine Learning, PMLR 70:3861-3870, 2017
+    - Most learning approaches treat dimensionality reduction (DR) and clustering separately (i.e., sequentially), but recent research has shown that optimizing the two tasks jointly can substantially improve the performance of both. The premise behind the latter genre is that the data samples are obtained via linear transformation of latent representations that are easy to cluster; but in practice, the transformation from the latent space to the data can be more complicated. In this work, we assume that this transformation is an unknown and possibly nonlinear function. To recover the `clustering-friendly’ latent representations and to better cluster the data, we propose a joint DR and K-means clustering approach in which DR is accomplished via learning a deep neural network (DNN). The motivation is to keep the advantages of jointly optimizing the two tasks, while exploiting the deep neural network’s ability to approximate any nonlinear function. This way, the proposed approach can work well for a broad class of generative models. Towards this end, we carefully design the DNN structure and the associated joint optimization criterion, and propose an effective and scalable algorithm to handle the formulated optimization problem. Experiments using different real datasets are employed to showcase the effectiveness of the proposed approach.
+    - 目的是为了找到'clustering-friendly' latent representations, 联合K-means loss和represenataion loss在一个统一的框架中。
+    - 设计一种带权重的类中心更新策略，假设每个类的样本数量接近，那么在已经训练过的样本中，当某一个类所对应的样本量比较多时，那么对于这一个类中心的更新要更加谨慎和微小，而对于其他类的更新要更在意，也就是带权重的更新策略，见公式（8）
+
+
+<spna id="xifengguojicai17"> </span>
+- *Improved deep embedded clustering with local structure preservation* [^^^](#return)
+    - https://www.ijcai.org/Proceedings/2017/243
+    - Xifeng Guo, Long Gao, Xinwang Liu, Jianping Yin
+    - Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence Main track. Pages 1753-1759
+    - Deep clustering learns deep feature representations that favor clustering task using neural networks. Some pioneering work proposes to simultaneously learn embedded features and perform clustering by explicitly defining a clustering oriented loss. Though promising performance has been demonstrated in various applications, we observe that a vital ingredient has been overlooked by these work that the defined clustering loss may corrupt feature space, which leads to non-representative meaningless features and this in turn hurts clustering performance. To address this issue, in this paper, we propose the Improved Deep Embedded Clustering (IDEC) algorithm to take care of data structure preservation. Specifically, we manipulate feature space to scatter data points using a clustering loss as guidance. To constrain the manipulation and maintain the local structure of data generating distribution, an under-complete autoencoder is applied. By integrating the clustering loss and autoencoder's reconstruction loss, IDEC can jointly optimize cluster labels assignment and learn features that are suitable for clustering with local structure preservation. The resultant optimization problem can be effectively solved by mini-batch stochastic gradient descent and backpropagation. Experiments on image and text datasets empirically validate the importance of local structure preservation and the effectiveness of our algorithm.
+    - 提出Improved Deep Embedded Clustering, 是DEC的改进版本(unsupervised deep embedding for clustering analysis)。IDEC算法中，首先采用了去噪自编码器对数据进行表征，根据z来获得初始的聚类中心，再用自编码器保留数据的局部结构（local structure）
+
 
 ---
 <span id="featureis"> </span>

@@ -22,7 +22,7 @@
 |Learning Representations for Time Series Clustering | NIPS | 2019 | [paper](https://papers.nips.cc/paper/2019/hash/1359aa933b48b754a2f54adb688bfa77-Abstract.html)|
 |Multivariate LSTM-FCNs for time series classification|Neural Networks|2019|[paper](https://www.sciencedirect.com/science/article/pii/S0893608019301200)|
 |Temporal representation learning for time series classification|Neural Computing and Applications|2020|[paper](https://link.springer.com/article/10.1007/s00521-020-05179-w)|
-|Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features|arXiv|2018|[paper](https://arxiv.org/abs/1802.01059)|
+
 ||||
 
 
@@ -31,6 +31,10 @@
 | :----------- | :-----------: | :-----------: | :----------- |
 | Structural Deep Clustering Network | WWW | 2020 |[paper](https://dl.acm.org/doi/10.1145/3366423.3380214)|
 |Unsupervised deep embedding for clustering analysis|ICML|2016|[paper](https://dl.acm.org/doi/10.5555/3045390.3045442)|
+|Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features|arXiv|2018|[paper](https://arxiv.org/abs/1802.01059)|
+|Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering|PMLR|2017|[paper](http://proceedings.mlr.press/v70/yang17b.html)|
+|Improved deep embedded clustering with local structure preservation|JICAI|2017|[paper](https://www.ijcai.org/Proceedings/2017/243)|
+
 
 > ## Coumpter Vision (CV)
 
