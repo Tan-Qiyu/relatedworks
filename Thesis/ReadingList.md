@@ -72,7 +72,12 @@
 |An improved qualitative shape analysis technique for automatic detection of valve stiction in flow control loops|Control Engineering Practice|2008|[paper](https://www.sciencedirect.com/science/article/pii/S0967066108000798)|
 |Automatic detection and quantification of stiction in control valves|Control Engineering Practice|2006|[paper](https://www.sciencedirect.com/science/article/pii/S0967066105002388)|
 |Data and Reliability Characterization Strategy for Automatic Detection of Valve Stiction in Control Loops|IEEE Transactions on Control Systems Technology|2017|[paper](https://ieeexplore.ieee.org/document/7505905)|
-
+|Detection and diagnosis of oscillations in process control by fast adaptive chirp mode decomposition|Control Engineering Practice|2020|[paper](https://www.sciencedirect.com/science/article/abs/pii/S096706612030006X)|
+|Detection and Diagnosis of Stiction in Control Loops. State of the Art and Advanced Methods|Advances in Industrial Control|2010|[book](https://www.springer.com/gp/book/9781848827745)|
+|Detection of stiction in flow control loops based on fuzzy clustering|Control Engineering Practice|2015|[paper](https://www.sciencedirect.com/science/article/abs/pii/S0967066115000295)|
+|Diagnosis quantification of control valves|IEEE SICE Annual Conference|2008|[paper](https://ieeexplore.ieee.org/document/4655010?denied=)|
+|Diagnosis ofpoor control-loop performance using higher-order statistics|Automatica|2004|[paper](https://www.sciencedirect.com/science/article/abs/pii/S0005109804001499)|
+|Diagnosis of Process Nonlinearities and Valve Stiction Data Driven Approaches| Advances in Industrial Control|2008|[book](https://www.springer.com/gp/book/9783540792239)|
 
 >> ### Part2: Compensation and Control  
 |Title|Publication|Year|Link|

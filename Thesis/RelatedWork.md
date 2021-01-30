@@ -89,6 +89,12 @@
     - [An improved qualitative shape analysis technique for automatic detection of valve stiction in flow control loops](#claudio2008)
     - [Automatic detection and quantification of stiction in control valves](#mmashoukatcep06)
     - [Data and Reliability Characterization Strategy for Automatic Detection of Valve Stiction in Control Loops](#octaviopozotcst)
+    - [Detection and diagnosis of oscillations in process control by fast adaptive chirp mode decomposition](#qimingchencep)
+    - [Detection and Diagnosis of Stiction in Control Loops State of the Art and Advanced Methods](#mohieddine2010)
+    - [Detection of stiction in flow control loops based on fuzzy clustering](#daneshwarcep15)
+    - [Diagnosis quantification of control valves](#yoshiyukiyamashita)
+    - [Diagnosis of poor control-loop performance using higher-order statistics](#maashoukat04)
+    - [Diagnosis of Process Nonlinearities and Valve Stiction](#choudhurybook08)
     - Compensation and Control
     - []
 ----
@@ -607,6 +613,58 @@
     - IEEE Transactions on Control Systems Technology ( Volume: 25, Issue: 3, May 2017), 769 - 780
     - Automatic detection of process faults requires process expertise to determine the fault symptoms and mathematical algorithms that can classify these symptoms correctly. Thus, the effectiveness of any automatic detection system can degrade because of inconsistencies in the process data and variations in the assumed symptoms of the fault. This paper presents a novel detection strategy based on the data characterization and reliability analysis. In more detail, at first process data are profiled to automatically select and apply the most suitable detection algorithms. Then, the reliability of the detection decisions made by the selected detection algorithms is evaluated, considering a decision unreliable when the process data fit neither the healthy case nor the faulty case assumed by the method. The strategy is applied to a valve stiction detection system. In addition, an exponential fitting method, recognizing three oscillation patterns associated with stiction, is proposed and incorporated into the system. The resulting system was tested on a benchmark data, and the results are discussed.
 
+<span id="qimingchencep"> </span>
+- *Detection and diagnosis of oscillations in process control by fast adaptive chirp mode decomposition* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/abs/pii/S096706612030006X
+    - Qiming Chen, Junghui Chen, Xun Lang, Lei Xie, Shan Lu, Hongye Su
+    - Control Engineering Practice, Volume 97, April 2020, 104307
+    - Even though several algorithms have been proposed in the literature for oscillation detection and diagnosis, they can work reliably only for a specific type of oscillation and there is a lack of a common framework that accommodates the detection and diagnosis for various types of oscillations. To tackle this problem, an FACMD-based (fast adaptive chirp mode decomposition) detection and diagnosis framework is established in this study. It consists of two common oscillation detection indices and a novel strategy for diagnosing nonlinear and linear oscillations. Apart from detecting and diagnosing various single/multiple oscillations in single-input single-output (SISO) loop, FACMD can also distinguish the combination of linear or nonlinear oscillations and contribute to the root cause analysis for plant-wide oscillations. Finally, a series of simulations and industrial cases are used for testing. Compared with the existing work, the proposed methodology has better detection and diagnosis accuracy and a higher level of automation, especially in processing complex multiple oscillations.
+
+<span id="mohieddine2010"> </span>
+- *Detection and Diagnosis of Stiction in Control Loops State of the Art and Advanced Methods* [^^^](#returnvalve)
+    - https://www.springer.com/gp/book/9781848827745
+    - Mohieddine JelaliBiao Huang
+    - Part of the Advances in Industrial Control book series (AIC)
+    - The presence of non-linearities, such as stiction and deadband, places limits on the performance of control valves. Indeed, in the process industries, stiction is the most common valve problem, and over the last decade numerous different techniques for overcoming it have been proposed.  
+    Detection and Diagnosis of Stiction in Control Loops represents a comprehensive presentation of these methods, including their principles, assumptions, strengths and drawbacks. Guidelines and working procedures are provided for the implementation of each method and MATLAB®-based software can be downloaded from www.ualberta.ca/~bhuang/stiction-book enabling readers to apply the methods to their own data. Methods for the limitation of stiction effects are proposed within the general context of:  
+    • oscillation detection in control loops;  
+    • stiction detection and diagnosis; and  
+    • stiction quantification and diagnosis of multiple faults.  
+    The state-of-the-art algorithms presented in this book are demonstrated and compared in industrial case studies of diverse origin – chemicals, building, mining, pulp and paper, mineral and metal processing. Industry-based engineers will find the book to be valuable guidance in increasing the performance of their control loops while academic researchers and graduate students interested in control performance and fault detection will discover a wealth of static-friction-related research and useful algorithms.
+
+<span id='daneshwarcep15'> </span>
+- *Detection of stiction in flow control loops based on fuzzy clustering* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/abs/pii/S0967066115000295
+    - M.A. Daneshwar, Norlaili Mohd Noh
+    - Control Engineering Practice, Volume 39, June 2015, Pages 23-34
+    - In the presence of stiction, the control valves may present an oscillatory behaviour that affects the regulatory control performance, thereby causing a loss of product quality and increasing energy consumption. Detection of stiction in the early phase is a crucial key for process control to avoid major disruptions to the plant operations. In this paper, a novel technique based on a well-developed fuzzy clustering approach is proposed. Based on a dramatic change of the slope of the lines obtained from successive cluster centres in the presence of stiction, a new performance index to distinguish the cause of oscillation is proposed. The simulation, experimental and industrial results are provided.
+
+<span id='yoshiyukiyamashita'> </span>
+- *Diagnosis and Quantification of Control Valves* [^^^](#returnvalve)
+    - https://ieeexplore.ieee.org/document/4655010?denied=
+    - Yoshiyuki Yamashita
+    - 2008 SICE Annual Conference
+    - Evaluation of control loop performance becomes of great importance to realize safe and highly efficient plant operations. Typical plant has hundreds or thousands of control loops and it is impossible to investigate all the control loops manually. Various researchers have been investigated automatic methods to evaluate performance of control loops. After the evaluation of control loop performance, root cause of poor performance should be diagnosed. One of the most common cause to produce oscillating behavior in control loops is the stiction of control valves. The author proposed a diagnosis method of stiction based on qualitative shape analysis. In this paper, the method is extended to quantify stiction by showing the width of sticky movements. The method is successfully applied to several data sets of industrial control loops.
+
+<span id='maashoukat04'> </span>
+- *Diagnosis of poor control-loop performance using higher-order statistics* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/abs/pii/S0005109804001499
+    - M.A.A.Shoukat Choudhury, Sirish.L. Shah, Nina.F. Thornhill
+    - Automatica, Volume 40, Issue 10, October 2004, Pages 1719-1728
+    - Higher-order statistical (HOS) techniques were first proposed over four decades ago. This paper is concerned with higher-order statistical analysis of closed-loop data for diagnosing the causes of poor control-loop performance. The main contributions of this work are to utilize HOS tools such as cumulants, bispectrum and bicoherence to develop two new indices: the non-Gaussianity index (NGI) and the nonlinearity index (NLI) for detecting and quantifying non-Gaussianity and nonlinearity that may be present in regulated systems, and to use routine operating data to diagnose the source of nonlinearity. The new indices together with some graphical plots have been found to be useful in diagnosing the causes of poor performance of control loops. Successful applications of the proposed method are demonstrated on simulated as well as industrial data. This study clearly shows that HOS-based methods are promising for closed-loop performance monitoring.
+
+<span id="choudhurybook08"> </span>
+- *Diagnosis of Process Nonlinearities and Valve Stiction* [^^^](#returnvalve)  
+    - https://www.springer.com/gp/book/9783540792239
+    - Shoukat M. A. A. ChoudhurySirish L. ShahNina F. Thornhill
+    - Part of the Advances in Industrial Control book series (AIC) 2008
+    - In this book, Higher Order Statistical (HOS) theory is used to develop indices for detecting and quantifying signal non-Gaussianity and nonlinearity. These indices, together with specific patterns in the mapping of process output and controller output are used to diagnose the causes of poor control loop performance.   
+    Often valve stiction is the main cause of poor control performance. A generalized definition of valve stiction based on the investigation of real plant data is proposed. A simple data-driven model of valve stiction is developed. The model is simple, yet powerful enough to properly simulate the complex valve stiction phenomena. Both open and closed loop results have been presented and validated to show the capability of the model.  
+    Conventional invasive methods such as the valve travel test can detect stiction easily. However, they are expensive, time consuming and tedious to use for examining thousands of valves in a typical process industry. A non-invasive method that can simultaneously detect and quantify control valve stiction is presented. The method requires only routine operating data from the process. Over a dozen industrial case studies have demonstrated the wide applicability and practicality of this method.  
+    In chemical industrial practice, data are often compressed for archival purposes, using various techniques. Compression degrades data quality and induces nonlinearity in the data. The issues of data quality degradation and nonlinearity induction due to compression are investigated in this book. An automatic method for detection and quantification of the compression present in the archived data is discussed. Compelling and quantitative analyses have been recommended to end the practice of process data compression.
+
+    
+    
 >> ### Compensation and Control
 
 
