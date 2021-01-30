@@ -96,7 +96,8 @@
     - [Diagnosis of poor control-loop performance using higher-order statistics](#maashoukat04)
     - [Diagnosis of Process Nonlinearities and Valve Stiction](#choudhurybook08)
     - Compensation and Control
-    - []
+    - [Enhancing MPC formulations by identification and estimation of valve stiction](#riccardobaccidicapaci)
+    - [Estimation of the Most Critical Parameter for the Two-Movement Method to Compensate for Oscillations Caused by Control Valve Stiction](#litangtcst)
 ----
 <span id="tsrcf"> </span>
 > ## **Time Series Representation/Classification/Forecasting**
@@ -666,6 +667,17 @@
     
     
 >> ### Compensation and Control
+<span id='riccardobaccidicapaci'> </span>
+- *Enhancing MPC formulations by identification and estimation of valve stiction* [^^^](#returnvalve)
+    - https://www.sciencedirect.com/science/article/pii/S0959152419300551
+    - RiccardoBacci di Capaci, Marco Vaccari, Claudio Scali, Gabriele Pannocchia
+    - Journal of Process Control, Volume 81, September 2019, Pages 31-39
+    - A common source of poor control performance in industrial processes is represented by stiction in control valves, which often induces offset, oscillating behavior, and even loss of stability. Recent studies have investigated the effectiveness of embedding stiction models into model predictive controller (MPC) schemes, moving from stiction unaware to different stiction aware formulations, which help to remove fluctuations and may guarantee higher set-point tracking ability. To this aim, along with the process model the controller needs to use a dynamic model of sticky valves. This paper proposes an efficient, computational approach to obtain both valve and process dynamics, under the framework of Hammerstein system identification, which is based on nonlinear, gradient-based, numerical optimization. In order to improve the computational behavior and effectiveness of the methodology, a recently proposed smoothed model of stiction is deployed. The proposed methodology is validated in several (single-input single-output, and multivariable) examples, where the effectiveness of the obtained stiction aware MPC regulator is also evaluated against a stiction unaware counterpart.
 
-
+<span id="litangtcst"> </span>
+- *Estimation of the Most Critical Parameter for the Two-Movement Method to Compensate for Oscillations Caused by Control Valve Stiction* [^^^](#returnvalve)
+    - https://ieeexplore.ieee.org/document/7383280
+    - Li Tang; Jiandong Wang
+    - IEEE Transactions on Control Systems Technology ( Volume: 24, Issue: 5, Sept. 2016)
+    - The two-movement method is one of the most effective compensation methods to remove oscillations caused by control valve stiction in feedback control loops. This method requires one critical parameter m ss for implementation, namely, the value of controller output associated with the desired valve position. This brief proposes a novel approach to estimate this critical parameter solely based on the oscillatory data samples available in the control loop. This approach removes the requirement of extra experiments before the implementation of the two-movement method such as open-loop step responses in the existing studies and greatly reduces the time cost of two-movement method. Numerical and laboratory examples are provided to illustrate the effectiveness of the two-movement method incorporating the estimation of m_ss
 

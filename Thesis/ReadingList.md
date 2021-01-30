@@ -79,8 +79,10 @@
 |Diagnosis ofpoor control-loop performance using higher-order statistics|Automatica|2004|[paper](https://www.sciencedirect.com/science/article/abs/pii/S0005109804001499)|
 |Diagnosis of Process Nonlinearities and Valve Stiction Data Driven Approaches| Advances in Industrial Control|2008|[book](https://www.springer.com/gp/book/9783540792239)|
 
+
 >> ### Part2: Compensation and Control  
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
-
+|Enhancing MPC formulations by identification and estimation of valve stiction|Journal of Process Control|2019|[paper](https://www.sciencedirect.com/science/article/pii/S0959152419300551)|
+|Estimation of the Most Critical Parameter for the Two-Movement Method to Compensate for Oscillations Caused by Control Valve Stiction|IEEE Transactions on Control Systems Technology|2016|[paper](https://ieeexplore.ieee.org/document/7383280)|
 
