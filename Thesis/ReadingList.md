@@ -34,7 +34,7 @@
 |Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features|arXiv|2018|[paper](https://arxiv.org/abs/1802.01059)|
 |Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering|PMLR|2017|[paper](http://proceedings.mlr.press/v70/yang17b.html)|
 |Improved deep embedded clustering with local structure preservation|JICAI|2017|[paper](https://www.ijcai.org/Proceedings/2017/243)|
-
+|Improving k-Means Clustering Performance with Disentangled Internal Representations|IJCNN|2020|[paper](https://arxiv.org/abs/2006.04535)|
 
 > ## Coumpter Vision (CV)
 
@@ -54,6 +54,12 @@
 |Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8704327)|
 |Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis|Computers & Chemical Engineering|2018|[paper](https://www.sciencedirect.com/science/article/pii/S0098135418302990)|
 |A deep belief network based fault diagnosis model for complex chemical processes|Computers & Chemical Engineering|2017|[paper](https://www.sciencedirect.com/science/article/pii/S0098135417301059)|
+|A Multiscale Feature Learning Scheme Based on Deep Learning for Industrial Process Monitoring and Fault Diagnosis|IEEE Access|2019|[paper](https://ieeexplore.ieee.org/document/8871174)|
+|A New Convolutional Neural Network-Based Data-Driven Fault Diagnosis Method| IEEE Transactions on Industrial Electronics |2018|[paper](https://ieeexplore.ieee.org/document/8114247)|
+|A Novel Dynamic Weight Principal Component Analysis Method and Hierarchical Monitoring Strategy for Process Fault Detection and Diagnosis|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8848877)|
+|Multiscale Convolutional Neural Networks for Fault Diagnosis of Wind Turbine Gearbox|IEEE Transactions on Industrial Electronics|2019|[paper](https://ieeexplore.ieee.org/document/8384293)|
+
+
 
 > ## Valve Stiction
 

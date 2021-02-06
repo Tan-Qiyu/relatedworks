@@ -3,7 +3,7 @@
 <span id="return"> </span>
 > ## **CONTENT** 
 
-- [Time Series Representation/Classification/Forecasting](#tsrcf)
+- >> ### [Time Series Representation/Classification/Forecasting](#tsrcf)
     - **Part 1:** Distance/Feature/Kernel-based
     - [Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles](#anthonybagnall2015)
     - [Similarity Measure Selection for Clustering Time Series Databases](#usuemori2016)
@@ -23,7 +23,7 @@
     - [Temporal representation learning for time series classification](#yupenghu)
     - 
 
-- [Anomaly Detection](#anomaly)
+- >> ### [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
 
 - [Clustering Analysis](#cluster)
@@ -32,14 +32,15 @@
     - [Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features](#naveensai)
     - [Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering](#boyangpmlr)
     - [Improved deep embedded clustering with local structure preservation](#xifengguojicai17)
+    - [Improving k-Means Clustering Performance with Disentangled Internal Representations](#abienfredagarap)
 
 
-- [Machine Learning](#ml)
+- >> ### [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
 
-- [Feature Interaction/Selection](#featureis)
+- >> ### [Feature Interaction/Selection](#featureis)
 
-- [Computer Vision (CV)](#cv)
+- >> ### [Computer Vision (CV)](#cv)
     - **Part 1:** Image Classification/Detection/Applications/Networks
     - [ImageNet Classification With Deep Convolutional Neural Networks](#alex2012)
     - [Temporal Convolutional Networks for Action Segmentation and Detection](#colin2017)
@@ -59,23 +60,29 @@
     - [β-VAE: Learning Basic Visual Concepts With A Constrained Variational Framework](#irina2017)
     - [Understanding disentangling in β-VAE](#christopher2018)
 
-- [Natural Language Processing (NLP)](#nlp)
+- >> ### [Natural Language Processing (NLP)](#nlp)
     - (1) Languages Classification/Applications/Networks
     - [Long Short-Term Memory](#sepp1997)
     - [Dilated Recurrent Neural Networks](#shiyuchang2017)
     - [An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling](#shaojiebai)
     - (2) Words Representation Learning
 
-- [Recommender Systems](#rs)
+- >> ### [Recommender Systems](#rs)
 
-- [Fault Diagnosis and Detection](#fdd)
+<span id="returnfault"> </span>
+
+- >> ### [Fault Diagnosis and Detection](#fdd)
     - [Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network](#zhongxuhu2020)
     - [Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis](#haowu)
-
+    - [A deep belief network based fault diagnosis model for complex chemical processes](#zhanpengzhang17)
+    - [A Multiscale Feature Learning Scheme Based on Deep Learning for Industrial Process Monitoring and Fault Diagnosis](#jingyuanaccess)
+    - [A New Convolutional Neural Network-Based Data-Driven Fault Diagnosis Method](#longwentie2018)
+    - [A Novel Dynamic Weight Principal Component Analysis Method and Hierarchical Monitoring Strategy for Process Fault Detection and Diagnosis](#yangtaotie2020)
+    - [Multiscale Convolutional Neural Networks for Fault Diagnosis of Wind Turbine Gearbo](#guoqianjiangtie2019)
 
 <span id="returnvalve"> </span>
 
-- [Valve Stiction](#valve)
+- >> ### [Valve Stiction](#valve)
     - Detection and Quantification
     - [A Curve Fitting Method for Detecting Valve Stiction in Oscillating Control Loops](#qpeterhe)
     - [A simple model-free butterfly shape-based detection (BSD) method integrated with deep learning CNN for valve stiction detection and quantification](#kamaruddin)
@@ -98,6 +105,7 @@
     - Compensation and Control
     - [Enhancing MPC formulations by identification and estimation of valve stiction](#riccardobaccidicapaci)
     - [Estimation of the Most Critical Parameter for the Two-Movement Method to Compensate for Oscillations Caused by Control Valve Stiction](#litangtcst)
+
 ----
 <span id="tsrcf"> </span>
 > ## **Time Series Representation/Classification/Forecasting**
@@ -293,6 +301,13 @@
     - Deep clustering learns deep feature representations that favor clustering task using neural networks. Some pioneering work proposes to simultaneously learn embedded features and perform clustering by explicitly defining a clustering oriented loss. Though promising performance has been demonstrated in various applications, we observe that a vital ingredient has been overlooked by these work that the defined clustering loss may corrupt feature space, which leads to non-representative meaningless features and this in turn hurts clustering performance. To address this issue, in this paper, we propose the Improved Deep Embedded Clustering (IDEC) algorithm to take care of data structure preservation. Specifically, we manipulate feature space to scatter data points using a clustering loss as guidance. To constrain the manipulation and maintain the local structure of data generating distribution, an under-complete autoencoder is applied. By integrating the clustering loss and autoencoder's reconstruction loss, IDEC can jointly optimize cluster labels assignment and learn features that are suitable for clustering with local structure preservation. The resultant optimization problem can be effectively solved by mini-batch stochastic gradient descent and backpropagation. Experiments on image and text datasets empirically validate the importance of local structure preservation and the effectiveness of our algorithm.
     - 提出Improved Deep Embedded Clustering, 是DEC的改进版本(unsupervised deep embedding for clustering analysis)。IDEC算法中，首先采用了去噪自编码器对数据进行表征，根据z来获得初始的聚类中心，再用自编码器保留数据的局部结构（local structure）
 
+<span id="abienfredagarap"> </span>
+- *Improving k-Means Clustering Performance with Disentangled Internal Representations* [^^^](#return)
+    - https://arxiv.org/abs/2006.04535
+    - Abien Fred Agarap, Arnulfo P. Azcarraga
+    - To be presented at IJCNN 2020 
+    - Deep clustering algorithms combine representation learning and clustering by jointly optimizing a clustering loss and a non-clustering loss. In such methods, a deep neural network is used for representation learning together with a clustering network. Instead of following this framework to improve clustering performance, we propose a simpler approach of optimizing the entanglement of the learned latent code representation of an autoencoder. We define entanglement as how close pairs of points from the same class or structure are, relative to pairs of points from different classes or structures. To measure the entanglement of data points, we use the soft nearest neighbor loss, and expand it by introducing an annealing temperature factor. Using our proposed approach, the test clustering accuracy was 96.2% on the MNIST dataset, 85.6% on the Fashion-MNIST dataset, and 79.2% on the EMNIST Balanced dataset, outperforming our baseline models.
+    - 这是一种两步聚类策略，首先通过ae学习disentangled internal representations, 然后再进行K-means聚类，基于一种soft nearest neighbor loss，本文提出一种改进的 Annealing Temperature Loss 来促使模型学习到合适的表征。
 
 ---
 <span id="featureis"> </span>
@@ -498,7 +513,7 @@
 <span id="fdd"> </span>
 > ## **Fault Diagnosis and Detection**
 <span id="zhongxuhu2020"> </span>
-- *Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network* [^^^](#return)
+- *Data-Driven Fault Diagnosis Method Based on Compressed Sensing and Improved Multiscale Network* [^^^](#returnfault)
     - https://ieeexplore.ieee.org/document/8704327
     - Zhong-Xu Hu, Yan Wang, Ming-Feng Ge, Jie Liu
     - IEEE Transactions on Industrial Electronics ( Volume: 67, Issue: 4, April 2020), 3216 – 3225
@@ -509,21 +524,57 @@
     - 针对单变量，缺乏temporal information，且需要label
 
 <span id="haowu"> </span>
-- *Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis* [^^^](#return)
+- *Deep Convolutional Neural Network Model based Chemical Process Fault Diagnosis* [^^^](#returnfault)
     - https://www.sciencedirect.com/science/article/pii/S0098135418302990?via%3Dihub
     - Hao Wu, Jinsong Zhao
     - Computers & Chemical Engineering, Volume 115, 12 July 2018, Pages 185-197
     - Numerous accidents in chemical processes have caused emergency shutdowns, property losses, casualties and/or environmental disruptions in the chemical process industry. Fault detection and diagnosis (FDD) can help operators timely detect and diagnose abnormal situations, and take right actions to avoid ad- verse consequences. However, FDD is still far from widely practical applications. Over the past few years, deep convolutional neural network (DCNN) has shown excellent performance on machine-learning tasks. In this paper, a fault diagnosis method based on a DCNN model consisting of convolutional layers, pooling layers, dropout, fully connected layers is proposed for chemical process fault diagnosis. The benchmark Tennessee Eastman (TE) process is utilized to verify the outstanding performance of the fault diagnosis method.
     - 卷积网络用于TE Process，主要是看如何仿真TE Process, t-SNE 可用来可视化
 
-<span id= ""> </span>
-- *A deep belief network based fault diagnosis model for complex chemical processes* [^^^](#return)
+<span id="zhanpengzhang17"> </span>
+- *A deep belief network based fault diagnosis model for complex chemical processes* [^^^](#returnfault)
     - https://www.sciencedirect.com/science/article/pii/S0098135417301059
     - Zhanpeng Zhang, Jinsong Zhao
     - Computers & Chemical Engineering, Volume 107, 5 December 2017, Pages 395-407
     - Data-driven methods have been regarded as desirable methods for fault detection and diagnosis (FDD) of practical chemical processes. However, with the big data era coming, how to effectively extract and present fault features is one of the keys to successful industrial applications of FDD technologies. In this paper, an extensible deep belief network (DBN) based fault diagnosis model is proposed. Individual fault features in both spatial and temporal domains are extracted by DBN sub-networks, aided by the mutual information technology. A global two-layer back-propagation network is trained and used for fault classification. In the final part of this paper, the benchmarked Tennessee Eastman process is utilized to illustrate the performance of the DBN based fault diagnosis model.
     - 深度置信网络用于提取故障特征，参考如何仿真TE Process
 
+<span id="jingyuanaccess"> </span>
+- *A Multiscale Feature Learning Scheme Based on Deep Learning for Industrial Process Monitoring and Fault Diagnosis* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8871174
+    - Jing Yuan, Ying Tian
+    - IEEE Access ( Volume: 7), 151189 - 151202.
+    - Considering that industrial data exhibit nonlinearity, high dimensionality and inherent multiscale characteristics, this paper proposes an intelligent industrial process monitoring and fault diagnosis method based on the discrete wavelet transform and deep learning. First, the discrete wavelet transform is used to present the multiscale representation of the raw data. Second, a multiscale convolutional neural network is used to extract the features at each scale, and then the extracted multiscale features are fused by the long short-term memory network to further reduce useless information and retain useful information. Finally, softmax classification is performed. The proposed method has two advantages: 1) the hierarchical learning structure with multiple pairs of convolutional and pooling layers can effectively learn nonlinear, high-dimensional fault features; and 2) the multiscale feature learning scheme can capture complementary diagnosis information at different scales. Detailed comparative studies between the proposed method and conventional methods have been carried out through the Tennessee Eastman benchmark process and the p-xylene oxidation reaction process.
+    - 提出 an intelligent industrial process monitoring and fault diagnosismethod based on the discrete wavelet transform and deep learning
+    - 原始信号分解 According to DWT-based MRA, the original signalx(t) can be decomposed intoseveral signals of different scales without any energy loss
+    - 首先基于离散小波将原始数据进行重新表征，再利用多时间尺度卷积网络在每一个尺度上进行特征的提取，最后再用LSTM将每一个尺度下的特征融合，最后再接softmax层。
+    - 仍然采用TE过程进行验证，20个故障+1个正常工况，采用t-SNE可视化，评价指标f1, recall, precision
+
+<span id="longwentie2018"> </span>
+- *A New Convolutional Neural Network-Based Data-Driven Fault Diagnosis Method* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8114247
+    - Long Wen, Xinyu Li, Liang Gao, Yuyan Zhang
+    - IEEE Transactions on Industrial Electronics, ( Volume: 65, Issue: 7, July 2018) 5990 - 5998
+    - Fault diagnosis is vital in manufacturing system, since early detections on the emerging problem can save invaluable time and cost. With the development of smart manufacturing, the data-driven fault diagnosis becomes a hot topic. However, the traditional data-driven fault diagnosis methods rely on the features extracted by experts. The feature extraction process is an exhausted work and greatly impacts the final result. Deep learning (DL) provides an effective way to extract the features of raw data automatically. Convolutional neural network (CNN) is an effective DL method. In this study, a new CNN based on LeNet-5 is proposed for fault diagnosis. Through a conversion method converting signals into two-dimensional (2-D) images, the proposed method can extract the features of the converted 2-D images and eliminate the effect of handcrafted features. The proposed method which is tested on three famous datasets, including motor bearing dataset, self-priming centrifugal pump dataset, and axial piston hydraulic pump dataset, has achieved prediction accuracy of 99.79%, 99.481%, and 100%, respectively. The results have been compared with other DL and traditional methods, including adaptive deep CNN, sparse filter, deep belief network, and support vector machine. The comparisons show that the proposed CNN-based data-driven fault diagnosis method has achieved significant improvements.
+    - 提出 a new CNN basedon LeNet-5 is proposed for fault diagnosis
+    - 通过一个conversion将原始1D信号转换为2D信号，Signal-to-image conversion method，针对单变量的时间序列，The advantage of this data processing method is that it pro-vides a way to explore 2-D features of the raw signals. hat’s more, this data preprocessing method can be calculatedwithout any predefined parameters and can reduce the experts’experiences as more as possible.
+    - 测试集：motor bearing dataset，self-priming centrifugal pump dataset, and axial pistonhydraulic pump datase
+
+<span id='yangtaotie2020'> </span>
+- *A Novel Dynamic Weight Principal Component Analysis Method and Hierarchical Monitoring Strategy for Process Fault Detection and Diagnosis* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8848877
+    - Yang Tao; Hongbo Shi; Bing Song; Shuai Tan
+    - IEEE Transactions on Industrial Electronics ( Volume: 67, Issue: 9, Sept. 2020), 7994 - 8004
+    - Traditional monitoring algorithms use the normal data for modeling, which are universal for different types of faults. However, these algorithms may perform poorly sometimes because of the lack of fault information. In order to further increase the fault detection rate while preserving the universality of the algorithm, a novel dynamic weight principal component analysis (DWPCA) algorithm and a hierarchical monitoring strategy are proposed. In the first layer, the dynamic PCA is used for fault detection and diagnosis, if no fault is detected, the following DWPCA-based second layer monitoring will be triggered. In the second layer, the principal components (PCs) are weighted according to its ability in distinguishing between the normal and fault conditions, then the PCs which own larger weight are selected to construct the monitoring model. Compared to the DPCA method, the proposed DWPCA algorithm establishes the monitoring model by combining the information of fault. Afterward, the DWPCA-based variable relative contribution and a novel control limit for the variable relative contribution are presented for the fault diagnosis. Finally, the superiority of the proposed method is demonstrated by a numerical case and the Tennessee Eastman process.
+    - 提出一种动态权重PCA(DWPCA)，是DPCA的改进版本。公式较多，需要仔细看看，看看是否能提取有用的信息到深度聚类模型中。
+
+<span id='guoqianjiangtie2019'> </span>
+- *Multiscale Convolutional Neural Networks for Fault Diagnosis of Wind Turbine Gearbox* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8384293
+    - Guoqian Jiang; Haibo He; Jun Yan; Ping Xie
+    - IEEE Transactions on Industrial Electronics ( Volume: 66, Issue: 4, April 2019), 3196 - 3207
+    - This paper proposes a novel intelligent fault diagnosis method to automatically identify different health conditions of wind turbine (WT) gearbox. Unlike traditional approaches, where feature extraction and classification are separately designed and performed, this paper aims to automatically learn effective fault features directly from raw vibration signals while classify the type of faults in a single framework, thus providing an end-to-end learning-based fault diagnosis system for WT gearbox without additional signal processing and diagnostic expertise. Considering the multiscale characteristics inherent in vibration signals of a gearbox, a new multiscale convolutional neural network (MSCNN) architecture is proposed to perform multiscale feature extraction and classification simultaneously. The proposed MSCNN incorporates multiscale learning into the traditional CNN architecture, which has two merits: 1) high-level fault features can be effectively learned by the hierarchical learning structure with multiple pairs of convolutional and pooling layers; and 2) multiscale learning scheme can capture complementary and rich diagnosis information at different scales. This greatly improves the feature learning ability and enables better diagnosis performance. The proposed MSCNN approach is evaluated through experiments on a WT gearbox test rig. Experimental results and comprehensive comparison analysis with respect to the traditional CNN and traditional multiscale feature extractors have demonstrated the superiority of the proposed method.
+    - 
 
 ---
 <span id="valve"> </span>
