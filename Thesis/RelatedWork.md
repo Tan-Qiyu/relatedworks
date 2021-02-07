@@ -26,7 +26,7 @@
 - >> ### [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
 
-- [Clustering Analysis](#cluster)
+- >> ### [Clustering Analysis](#cluster)
     - [Structural Deep Clustering Network](#deyubo)
     - [Unsupervised deep embedding for clustering analysis](#junyuanxie)
     - [Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features](#naveensai)
@@ -79,7 +79,13 @@
     - [A New Convolutional Neural Network-Based Data-Driven Fault Diagnosis Method](#longwentie2018)
     - [A Novel Dynamic Weight Principal Component Analysis Method and Hierarchical Monitoring Strategy for Process Fault Detection and Diagnosis](#yangtaotie2020)
     - [Multiscale Convolutional Neural Networks for Fault Diagnosis of Wind Turbine Gearbo](#guoqianjiangtie2019)
+    - [An Automatic Identification Framework for Complex Power Quality Disturbances Based on Multifusion Convolutional Neural Network](#weiqiutii2020)
+    - [One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis](#jianboyutii2020)
+    - [Data-Driven Mode Identification and Unsupervised Fault Detection for Nonlinear Multimode Processes](#beiwangtii2020)
+    - [Deep Convolutional Transfer Learning Network: A New Method for Intelligent Fault Diagnosis of Machines With Unlabeled Data](#liangguotie2019)
 
+
+    
 <span id="returnvalve"> </span>
 
 - >> ### [Valve Stiction](#valve)
@@ -574,9 +580,46 @@
     - Guoqian Jiang; Haibo He; Jun Yan; Ping Xie
     - IEEE Transactions on Industrial Electronics ( Volume: 66, Issue: 4, April 2019), 3196 - 3207
     - This paper proposes a novel intelligent fault diagnosis method to automatically identify different health conditions of wind turbine (WT) gearbox. Unlike traditional approaches, where feature extraction and classification are separately designed and performed, this paper aims to automatically learn effective fault features directly from raw vibration signals while classify the type of faults in a single framework, thus providing an end-to-end learning-based fault diagnosis system for WT gearbox without additional signal processing and diagnostic expertise. Considering the multiscale characteristics inherent in vibration signals of a gearbox, a new multiscale convolutional neural network (MSCNN) architecture is proposed to perform multiscale feature extraction and classification simultaneously. The proposed MSCNN incorporates multiscale learning into the traditional CNN architecture, which has two merits: 1) high-level fault features can be effectively learned by the hierarchical learning structure with multiple pairs of convolutional and pooling layers; and 2) multiscale learning scheme can capture complementary and rich diagnosis information at different scales. This greatly improves the feature learning ability and enables better diagnosis performance. The proposed MSCNN approach is evaluated through experiments on a WT gearbox test rig. Experimental results and comprehensive comparison analysis with respect to the traditional CNN and traditional multiscale feature extractors have demonstrated the superiority of the proposed method.
+    - 考虑到多时间尺度特性在原始数据中，提出一种多时间尺度卷积网络。也存在数据的transformation/conversion阶段
+    - merits: 1) highlevel fault features can be effectively learned by the hierarchical learning structure withmultiple pairs of convolutional and pooling layers; and 2) multiscale learning scheme can capture complementary and rich diagnosis information at different scales.
+    - 提出一种多尺度信号的构造方式，例如s=2, 表示新的信号是原始信号序列相连的两个采样点的平均值，也就是将原始信号缩短为原始信号的1/2，以此类推
+    - Introduction中总结了传统的智能故障诊断方法存在的问题，可参考
+
+<span id="weiqiutii2020"> </span>
+- *An Automatic Identification Framework for Complex Power Quality Disturbances Based on Multifusion Convolutional Neural Network* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8728236
+    - Wei Qiu; Qiu Tang; Jie Liu; Wenxuan Yao
+    - IEEE Transactions on Industrial Informatics ( Volume: 16, Issue: 5, May 2020), 3233 - 3241
+    - Intelligent identification of multiple power quality (PQ) disturbances is very useful for pollution control of power systems. In this paper, we propose a novel detection framework for complex PQ disturbances based on multifusion convolutional neural network (MFCNN). Our contributions focus on automatic extraction and fusion of features from multiple sources. First, an information fusion structure is introduced in which the time domain and frequency domain information of the PQ disturbance signal are used as inputs. Additionally, the one-dimensional composite convolution is proposed to improve the diversity of network features based on the standard convolution and dilated convolution. Then, to speed up the training and prevent overfitting, batch normalization is used to adjust the distribution of features. Second, we use several visualization methods to resolve the internal mode of MFCNN, and demonstrate the working mechanism of the proposed method. Finally, we conduct various experiments to verify the effectiveness of the MFCNN. Compared with the handcrafted feature design methods and the general convolutional neural network models, the simulation under different noises and hardware platform-based experiments verify the effectiveness of noise immunity, higher training speed, and better accuracy of the method.
+    - 针对智能电网中的扰动检测问题，提出MFCNN (multifusion convolutional neural network), focus on automatic extraction and fusion of features from multiple sources
+    - conntribution 1: combine raw signal and its corresponding frequency information based on 快速傅里叶变换
+    - 对比了很多其他CNN-based methods
+
+<span id="jianboyutii2020"> </span>
+- *One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8957534
+    - Jianbo Yu; Xingkang Zhou
+    - IEEE Transactions on Industrial Informatics ( Volume: 16, Issue: 10, Oct. 2020), 6347-6358
+    - Vibration signals are generally utilized for machinery fault diagnosis to perform timely maintenance and then reduce losses. Thus, the feature extraction on one-dimensional vibration signals often determines accuracy of those fault diagnosis models. These typical deep neural networks (DNNs), e.g., convolutional neural networks (CNNs), perform well in feature learning and have been applied in machine fault diagnosis. However, the supervised learning of CNN often requires a large amount of labeled images and thus limits its wide applications. In this article, a new DNN, one-dimensional residual convolutional autoencoder (1-DRCAE), is proposed for learning features from vibration signals directly in an unsupervised-learning way. First, 1-D convolutional autoencoder is proposed in 1-DRCAE for feature extraction. Second, a deconvolution operation is developed as decoder of 1-DRCAE to reconstruct the filtered signals. Third, residual learning is employed in 1-DRCAE to perform feature learning on 1-D vibration signals. The results show that 1-DRCAE has good signal denoising and feature extraction performance on vibration signals. It performs better on feature extraction than the typical DNNs, e.g., deep belief network, stacked autoencoders, and 1-D CNN.
+    - 无监督，针对监督CNN需要大量已标记的样本，提出一种1-DRCAE (ne-dimensional residual convolutional autoencoder)，基于残差学习，降低训练的难度和时间，
+    - 主要创新点是1-D的残差自编码器在1-D时序信号上的设计
+
+<span id='beiwangtii2020'> </span>
+- *Data-Driven Mode Identification and Unsupervised Fault Detection for Nonlinear Multimode Processes* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8845619
+    - Bei Wang; Zhichao Li; Zhenwen Dai; Neil Lawrence; Xuefeng Yan
+    - IEEE Transactions on Industrial Informatics ( Volume: 16, Issue: 6, June 2020), 3651 - 3661
+    - In modern plants, industrial processes typically operate under different states to meet the different requirements of high-quality products. Many monitoring models for industrial processes were constructed based on the prior knowledge (the mechanism's model or the process data characteristics) to monitor such processes (called multimode processes). However, obtaining this prior knowledge is difficult in practice. Efficiently monitoring nonlinear multimode processes without any prior knowledge is an open problem that demands further exploration. Since data from different modes follow different distributions while data from the same mode are considered to be sampled from the same distribution, the modes of multimode processes can be uncovered based on the characteristics of the process data. This article proposes using a Dirichlet process Gaussian mixed model to classify the modes of multimode processes based on historical data, and then, determine the mode types of the monitored data. A nonlinear monitoring strategy based on the t-distributed stochastic neighbor embedding is then proposed to achieve nonlinear dimensionality reduction and visualize the data. Finally, a monitoring index that is integrated with support vector data description is constructed for comprehensive monitoring. The proposed nonlinear multimode framework completely realizes data-driven mode identification and unsupervised fault detection without knowing any prior knowledge. The effectiveness and feasibility of the proposed model are demonstrated using data from a simulated wastewater treatment plant.
     - 
 
----
+<span id='liangguotie2019'> </span>
+- *Deep Convolutional Transfer Learning Network: A New Method for Intelligent Fault Diagnosis of Machines With Unlabeled Data* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8511076
+    - Liang Guo; Yaguo Lei; Saibo Xing; Tao Yan; Naipeng Li
+    - IEEE Transactions on Industrial Electronics ( Volume: 66, Issue: 9, Sept. 2019) Page(s): 7316 - 7325
+    - The success of intelligent fault diagnosis of machines relies on the following two conditions: 1) labeled data with fault information are available; and 2) the training and testing data are drawn from the same probability distribution. However, for some machines, it is difficult to obtain massive labeled data. Moreover, even though labeled data can be obtained from some machines, the intelligent fault diagnosis method trained with such labeled data possibly fails in classifying unlabeled data acquired from the other machines due to data distribution discrepancy. These problems limit the successful applications of intelligent fault diagnosis of machines with unlabeled data. As a potential tool, transfer learning adapts a model trained in a source domain to its application in a target domain. Based on the transfer learning, we propose a new intelligent method named deep convolutional transfer learning network (DCTLN). A DCTLN consists of two modules: condition recognition and domain adaptation. The condition recognition module is constructed by a one-dimensional (1-D) convolutional neural network (CNN) to automatically learn features and recognize health conditions of machines. The domain adaptation module facilitates the 1-D CNN to learn domain-invariant features by maximizing domain recognition errors and minimizing the probability distribution distance. The effectiveness of the proposed method is verified using six transfer fault diagnosis experiments.
+
+---------
 <span id="valve"> </span>
 > ## **Valve Stiction**
 >> ### Detection and Quantification

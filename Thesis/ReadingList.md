@@ -58,7 +58,10 @@
 |A New Convolutional Neural Network-Based Data-Driven Fault Diagnosis Method| IEEE Transactions on Industrial Electronics |2018|[paper](https://ieeexplore.ieee.org/document/8114247)|
 |A Novel Dynamic Weight Principal Component Analysis Method and Hierarchical Monitoring Strategy for Process Fault Detection and Diagnosis|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8848877)|
 |Multiscale Convolutional Neural Networks for Fault Diagnosis of Wind Turbine Gearbox|IEEE Transactions on Industrial Electronics|2019|[paper](https://ieeexplore.ieee.org/document/8384293)|
-
+|An Automatic Identification Framework for Complex Power Quality Disturbances Based on Multifusion Convolutional Neural Network|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8728236)|
+|One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8957534)|
+|Data-Driven Mode Identification and Unsupervised Fault Detection for Nonlinear Multimode Processes|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8845619)|
+|Deep Convolutional Transfer Learning Network: A New Method for Intelligent Fault Diagnosis of Machines With Unlabeled Data|IEEE Transactions on Industrial Electronics|2019|[paper](https://ieeexplore.ieee.org/document/8511076)|
 
 
 > ## Valve Stiction
