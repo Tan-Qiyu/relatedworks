@@ -3,6 +3,12 @@
 <span id="return"> </span>
 > ## **CONTENT** 
 
+<span id="returnreview"> </span>
+
+- >> ### [Review/Survey](#review)
+    - [A Review on Distance Based Time Series Classification](#amaiaabanda2019)
+    - [State of AI-Based Monitoring in Smart Manufacturing and Introduction to Focused Section](#handingtmec2020)
+    - []
 - >> ### [Time Series Representation/Classification/Forecasting](#tsrcf)
     - **Part 1:** Distance/Feature/Kernel-based
     - [Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles](#anthonybagnall2015)
@@ -10,7 +16,7 @@
     - [Mining Novel Multivariate Relationships In Time Series Data Using Correlation Networks](#saurabhagrawal2020)
     - [Classifying Time Series Using Local Descriptors with Hybrid Sampling](#jiapingzhao2016)
     - [Random Warping Series: A Random Features Method for Time-Series Embedding](#lingfeiwu2018)
-    - [A Review on Distance Based Time Series Classification](#amaiaabanda2019)
+    - 
     - [A Fast Shapelet Selection Algorithm For Time Series Classification](#cunji2019)
     - [Unsupervised Classification of Multivariate Time Series Using VPCA and Fuzzy Clustering with Spatial Weighted Matrix Distance](#honghe)   
     - [Highly Comparative Feature-Based Time-Series Classification](#bendfulcher)
@@ -83,9 +89,12 @@
     - [One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis](#jianboyutii2020)
     - [Data-Driven Mode Identification and Unsupervised Fault Detection for Nonlinear Multimode Processes](#beiwangtii2020)
     - [Deep Convolutional Transfer Learning Network: A New Method for Intelligent Fault Diagnosis of Machines With Unlabeled Data](#liangguotie2019)
-
-
-    
+    - [Deep Coupled Dense Convolutional Network With Complementary Data for Intelligent Fault Diagnosis](#jinyangjiaotie2019)
+    - [Deep Residual Shrinkage Networks for Fault Diagnosis](#minghangzhaotii2020)
+    - [Fault Diagnosis for Rotating Machinery Using Multiple Sensors and Convolutional Neural Networks](#minxiatmec2018)
+    - [Intelligent Fault Diagnosis for Rotary Machinery Using Transferable Convolutional Neural Network](#zhuyuanchentii2020)
+    - [An Intelligent Fault Diagnosis Method Using Unsupervised Feature Learning Towards Mechanical Big Data](#yaguoleitie2016)
+    - [One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis](#jianboyutii2020)
 <span id="returnvalve"> </span>
 
 - >> ### [Valve Stiction](#valve)
@@ -111,6 +120,28 @@
     - Compensation and Control
     - [Enhancing MPC formulations by identification and estimation of valve stiction](#riccardobaccidicapaci)
     - [Estimation of the Most Critical Parameter for the Two-Movement Method to Compensate for Oscillations Caused by Control Valve Stiction](#litangtcst)
+
+
+<span id='review'> </span>
+> ## **Review/Survey**
+
+<span id="amaiaabanda2019"> </span>
+- *A Review on Distance Based Time Series Classification* [^^^](#returnreview)
+    - https://link.springer.com/article/10.1007/s10618-018-0596-4 
+    - Amaia Abanda, Usue Mori, Jose A. Lozano
+    - Data Mining and Knowledge Discovery volume 33, pages: 378–412(2019)
+    - Time series classification is an increasing research topic due to the vast amount of time series data that is being created over a wide variety of fields. The particularity of the data makes it a challenging task and different approaches have been taken, including the distance based approach. 1-NN has been a widely used method within distance based time series classification due to its simplicity but still good performance. However, its supremacy may be attributed to being able to use specific distances for time series within the classification process and not to the classifier itself. With the aim of exploiting these distances within more complex classifiers, new approaches have arisen in the past few years that are competitive or which outperform the 1-NN based approaches. In some cases, these new methods use the distance measure to transform the series into feature vectors, bridging the gap between time series and traditional classifiers. In other cases, the distances are employed to obtain a time series kernel and enable the use of kernel methods for time series classification. One of the main challenges is that a kernel function must be positive semi-definite, a matter that is also addressed within this review. The presented review includes a taxonomy of all those methods that aim to classify time series using a distance based approach, as well as a discussion of the strengths and weaknesses of each method.
+    - 讨论基于距离的时序分类方法，同时进行了优缺点的分析。将时序分类分为feature based (transformed into feature vectors and then classified by a conventional classifier, such as discrete Fourier transform, discrete wavelet), model based, distance based(a (dis)similarity measure between series),这篇论文重点是对基于距离的方法进行了总结，大致分为几类，第一类直接利用全局距离（Global distance features）或局部距离(Local distance features)，嵌入特征（Embedded features： 不直接利用距离度量，而是利用距离的度量生成其他新的表征），基于核方法（Distance kernels， 基于距离度量来生成时序核，这种方法还需再自己看看，不是很熟悉）
+
+
+<span id='handingtmec2020'> </span>
+- *State of AI-Based Monitoring in Smart Manufacturing and Introduction to Focused Section* [^^^](#returnreview)
+    - https://ieeexplore.ieee.org/document/9189823
+    - Han Ding; Robert X. Gao; Alf J. Isaksson; Robert G. Landers; Thomas Parisini; Ye Yuan
+    - IEEE/ASME Transactions on Mechatronics ( Volume: 25, Issue: 5, Oct. 2020)Page(s): 2143 - 2154
+    - Over the past few decades, intelligentization, supported by artificial intelligence (AI) technologies, has become an important trend for industrial manufacturing, accelerating the development of smart manufacturing. In modern industries, standard AI has been endowed with additional attributes, yielding the so-called industrial artificial intelligence (IAI) that has become the technical core of smart manufacturing. AI-powered manufacturing brings remarkable improvements in many aspects of closed-loop production chains from manufacturing processes to end product logistics. In particular, IAI incorporating domain knowledge has benefited the area of production monitoring considerably. Advanced AI methods such as deep neural networks, adversarial training, and transfer learning have been widely used to support both diagnostics and predictive maintenance of the entire production process. It is generally believed that IAI is the critical technologies needed to drive the future evolution of industrial manufacturing. This article offers a comprehensive overview of AI-powered manufacturing and its applications in monitoring. More specifically, it summarizes the key technologies of IAI and discusses their typical application scenarios with respect to three major aspects of production monitoring: fault diagnosis, remaining useful life prediction, and quality inspection. In addition, the existing problems and future research directions of IAI are also discussed. This article further introduces the papers in this focused section on AI-based monitoring in smart manufacturing by weaving them into the overview, highlighting how they contribute to and extend the body of literature in this area.
+
+
 
 ----
 <span id="tsrcf"> </span>
@@ -158,13 +189,7 @@
     - Time series data analytics has been a problem of substantial interests for decades, and Dynamic Time Warping (DTW) has been the most widely adopted technique to measure dissimilarity between time series. A number of global-alignment kernels have since been proposed in the spirit of DTW to extend its use to kernel-based estimation method such as support vector machine. However, those kernels suffer from diagonal dominance of the Gram matrix and a quadratic complexity w.r.t. the sample size. In this work, we study a family of alignment-aware positive definite (p.d.) kernels, with its feature embedding given by a distribution of \emph{Random Warping Series (RWS)}. The proposed kernel does not suffer from the issue of diagonal dominance while naturally enjoys a \emph{Random Features} (RF) approximation, which reduces the computational complexity of existing DTW-based techniques from quadratic to linear in terms of both the number and the length of time-series. We also study the convergence of the RF approximation for the domain of time series of unbounded length. Our extensive experiments on 16 benchmark datasets demonstrate that RWS outperforms or matches state-of-the-art classification and clustering methods in both accuracy and computational time.
     - Problems: Unfortunately, the DTW distance does not correspond to a valid positive- definite (p.d.) kernel and thus direct use of DTW leads to an indefinite kernel matrix that neither corresponds to a loss minimization problem nor giving a convex optimization problem. 因此提出一种Random Warping Series （RWS） Approximation主要是为了解决一般通过距离度量来构造核时，矩阵的非半正定问题。是否考虑用深度网络来代替核的作用，避免这些问题。
 
-<span id="amaiaabanda2019"> </span>
-- *A Review on Distance Based Time Series Classification* [^^^](#return)
-    - https://link.springer.com/article/10.1007/s10618-018-0596-4 
-    - Amaia Abanda, Usue Mori, Jose A. Lozano
-    - Data Mining and Knowledge Discovery volume 33, pages: 378–412(2019)
-    - Time series classification is an increasing research topic due to the vast amount of time series data that is being created over a wide variety of fields. The particularity of the data makes it a challenging task and different approaches have been taken, including the distance based approach. 1-NN has been a widely used method within distance based time series classification due to its simplicity but still good performance. However, its supremacy may be attributed to being able to use specific distances for time series within the classification process and not to the classifier itself. With the aim of exploiting these distances within more complex classifiers, new approaches have arisen in the past few years that are competitive or which outperform the 1-NN based approaches. In some cases, these new methods use the distance measure to transform the series into feature vectors, bridging the gap between time series and traditional classifiers. In other cases, the distances are employed to obtain a time series kernel and enable the use of kernel methods for time series classification. One of the main challenges is that a kernel function must be positive semi-definite, a matter that is also addressed within this review. The presented review includes a taxonomy of all those methods that aim to classify time series using a distance based approach, as well as a discussion of the strengths and weaknesses of each method.
-    - 讨论基于距离的时序分类方法，同时进行了优缺点的分析。将时序分类分为feature based (transformed into feature vectors and then classified by a conventional classifier, such as discrete Fourier transform, discrete wavelet), model based, distance based(a (dis)similarity measure between series),这篇论文重点是对基于距离的方法进行了总结，大致分为几类，第一类直接利用全局距离（Global distance features）或局部距离(Local distance features)，嵌入特征（Embedded features： 不直接利用距离度量，而是利用距离的度量生成其他新的表征），基于核方法（Distance kernels， 基于距离度量来生成时序核，这种方法还需再自己看看，不是很熟悉）
+
 
 <span id="cunji2019"> </span>
 - *A Fast Shapelet Selection Algorithm For Time Series Classification* [^^^](#return)
@@ -618,6 +643,49 @@
     - Liang Guo; Yaguo Lei; Saibo Xing; Tao Yan; Naipeng Li
     - IEEE Transactions on Industrial Electronics ( Volume: 66, Issue: 9, Sept. 2019) Page(s): 7316 - 7325
     - The success of intelligent fault diagnosis of machines relies on the following two conditions: 1) labeled data with fault information are available; and 2) the training and testing data are drawn from the same probability distribution. However, for some machines, it is difficult to obtain massive labeled data. Moreover, even though labeled data can be obtained from some machines, the intelligent fault diagnosis method trained with such labeled data possibly fails in classifying unlabeled data acquired from the other machines due to data distribution discrepancy. These problems limit the successful applications of intelligent fault diagnosis of machines with unlabeled data. As a potential tool, transfer learning adapts a model trained in a source domain to its application in a target domain. Based on the transfer learning, we propose a new intelligent method named deep convolutional transfer learning network (DCTLN). A DCTLN consists of two modules: condition recognition and domain adaptation. The condition recognition module is constructed by a one-dimensional (1-D) convolutional neural network (CNN) to automatically learn features and recognize health conditions of machines. The domain adaptation module facilitates the 1-D CNN to learn domain-invariant features by maximizing domain recognition errors and minimizing the probability distribution distance. The effectiveness of the proposed method is verified using six transfer fault diagnosis experiments.
+    - 
+
+<span id='jinyangjiaotie2019'> </span>
+- *Deep Coupled Dense Convolutional Network With Complementary Data for Intelligent Fault Diagnosis* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8663605
+    - Jinyang Jiao; Ming Zhao; Jing Lin; Chuancang Din
+    - IEEE Transactions on Industrial Electronics ( Volume: 66, Issue: 12, Dec. 2019) Page(s): 9858 - 9867
+    - In recent years, artificial intelligent techniques have been extensively explored in the field of health monitoring and fault diagnosis due to their powerful capabilities. In this paper, we propose a deep coupled dense convolutional network (CDCN) with complementary data to integrate information fusion, feature extraction, and fault classification together for intelligent diagnosis. In this framework, built-in and external sensor data are first developed to form the input of network in parallel. Then, a one-dimensional CDCN is proposed, which not only could naturally build deeper network with alleviating the loss of features and gradient vanishing, but also develops a double-level information fusion strategy, including self-information fusion and mutual-information fusion, to facilitate the transmission of fault information and capture more comprehensive features. Finally, the extracted joint features are used for fault recognition and classification. The proposed approach is evaluated on a planetary gearbox test-bed. The results demonstrate the validity and superiority of the proposed method.
+    - 
+
+
+<span id='minghangzhaotii2020'> </span>
+- *Deep Residual Shrinkage Networks for Fault Diagnosis* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8850096
+    - Minghang Zhao; Shisheng Zhong; Xuyun Fu; Baoping Tang; Michael Pecht
+    - IEEE Transactions on Industrial Informatics ( Volume: 16, Issue: 7, July 2020) Page(s): 4681 - 4690
+    - This article develops new deep learning methods, namely, deep residual shrinkage networks, to improve the feature learning ability from highly noised vibration signals and achieve a high fault diagnosing accuracy. Soft thresholding is inserted as nonlinear transformation layers into the deep architectures to eliminate unimportant features. Moreover, considering that it is generally challenging to set proper values for the thresholds, the developed deep residual shrinkage networks integrate a few specialized neural networks as trainable modules to automatically determine the thresholds, so that professional expertise on signal processing is not required. The efficacy of the developed methods is validated through experiments with various types of noise.
+    - 
+
+<span id='minxiatmec2018'> </span>
+- *Fault Diagnosis for Rotating Machinery Using Multiple Sensors and Convolutional Neural Networks* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/7982756
+    - Min Xia; Teng Li; Lin Xu; Lizhi Liu; Clarence W. de Silva
+    -  IEEE/ASME Transactions on Mechatronics ( Volume: 23, Issue: 1, Feb. 2018), Page(s): 101 - 110 
+    - This paper presents a convolutional neural network (CNN) based approach for fault diagnosis of rotating machinery. The proposed approach incorporates sensor fusion by taking advantage of the CNN structure to achieve higher and more robust diagnosis accuracy. Both temporal and spatial information of the raw data from multiple sensors is considered during the training process of the CNN. Representative features can be extracted automatically from the raw signals. It avoids manual feature extraction or selection, which relies heavily on prior knowledge of specific machinery and fault types. The effectiveness of the developed method is evaluated by using datasets from two types of typical rotating machinery, roller bearings, and gearboxes. Compared with traditional approaches using manual feature extraction, the results show the superior diagnosis performance of the proposed method. The present approach can be extended to fault diagnosis of other machinery with various types of sensors due to its end to end feature learning capability.
+    - 
+
+<span id='zhuyuanchentii2020'> </span>
+- *Intelligent Fault Diagnosis for Rotary Machinery Using Transferable Convolutional Neural Network* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/8716596
+    - Zhuyun Chen; Konstantinos Gryllias; Weihua Li
+    - IEEE Transactions on Industrial Informatics ( Volume: 16, Issue: 1, Jan. 2020) Page(s): 339 - 349
+    - Deep neural networks present very competitive results in mechanical fault diagnosis. However, training deep models require high computing power while the performance of deep architectures in extracting discriminative features for decision making often suffers from the lack of sufficient training data. In this paper, a transferable convolutional neural network (CNN) is proposed to improve the learning of target tasks. First, a one-dimensional CNN is constructed and pretrained based on large source task datasets. Then a transfer learning strategy is adopted to train a deep model on target tasks by reusing the pretrained network. Thus, the proposed method not only utilizes the learning power of deep network but also leverages the prior knowledge from the source task. Four case studies are considered and the effects of transfer layers and training sample size on classification effectiveness are investigated. Results show that the proposed method exhibits better performance compared with other algorithms.
+
+<span id='yaguoleitie2016'> </span>
+- *An Intelligent Fault Diagnosis Method Using Unsupervised Feature Learning Towards Mechanical Big Data* [^^^](#returnfault)
+    - https://ieeexplore.ieee.org/document/7386639
+    - Yaguo Lei; Feng Jia; Jing Lin; Saibo Xing; Steven X. Ding
+    - IEEE Transactions on Industrial Electronics ( Volume: 63, Issue: 5, May 2016) Page(s): 3137 - 3147
+    - Intelligent fault diagnosis is a promising tool to deal with mechanical big data due to its ability in rapidly and efficiently processing collected signals and providing accurate diagnosis results. In traditional intelligent diagnosis methods, however, the features are manually extracted depending on prior knowledge and diagnostic expertise. Such processes take advantage of human ingenuity but are time-consuming and labor-intensive. Inspired by the idea of unsupervised feature learning that uses artificial intelligence techniques to learn features from raw data, a two-stage learning method is proposed for intelligent diagnosis of machines. In the first learning stage of the method, sparse filtering, an unsupervised two-layer neural network, is used to directly learn features from mechanical vibration signals. In the second stage, softmax regression is employed to classify the health conditions based on the learned features. The proposed method is validated by a motor bearing dataset and a locomotive bearing dataset, respectively. The results show that the proposed method obtains fairly high diagnosis accuracies and is superior to the existing methods for the motor bearing dataset. Because of learning features adaptively, the proposed method reduces the need of human labor and makes intelligent fault diagnosis handle big data more easily.
+
+<span id='jianboyutii2020'> </span>
+- **
 
 ---------
 <span id="valve"> </span>

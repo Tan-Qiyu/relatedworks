@@ -62,6 +62,13 @@
 |One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis|IEEE Transactions on Industrial Electronics|2020|[paper](https://ieeexplore.ieee.org/document/8957534)|
 |Data-Driven Mode Identification and Unsupervised Fault Detection for Nonlinear Multimode Processes|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8845619)|
 |Deep Convolutional Transfer Learning Network: A New Method for Intelligent Fault Diagnosis of Machines With Unlabeled Data|IEEE Transactions on Industrial Electronics|2019|[paper](https://ieeexplore.ieee.org/document/8511076)|
+|Deep Coupled Dense Convolutional Network With Complementary Data for Intelligent Fault Diagnosis| IEEE Transactions on Industrial Electronics|2019|[paper](https://ieeexplore.ieee.org/document/8663605)|
+|Deep Residual Shrinkage Networks for Fault Diagnosis|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8850096)|
+|Fault Diagnosis for Rotating Machinery Using Multiple Sensors and Convolutional Neural Networks|IEEE/ASME Transactions on Mechatronics|2018|[paper](https://ieeexplore.ieee.org/document/7982756)|
+|Intelligent Fault Diagnosis for Rotary Machinery Using Transferable Convolutional Neural Network|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8716596)|
+|State of AI-Based Monitoring in Smart Manufacturing and Introduction to Focused Section|IEEE/ASME Transactions on Mechatronics|2020|[paper](https://ieeexplore.ieee.org/document/9189823)|
+|An Intelligent Fault Diagnosis Method Using Unsupervised Feature Learning Towards Mechanical Big Data|IEEE Transactions on Industrial Electronics|2016|[paper](https://ieeexplore.ieee.org/document/7386639)|
+|One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8957534)|
 
 
 > ## Valve Stiction
