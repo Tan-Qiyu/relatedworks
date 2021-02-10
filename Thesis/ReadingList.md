@@ -68,8 +68,9 @@
 |Intelligent Fault Diagnosis for Rotary Machinery Using Transferable Convolutional Neural Network|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8716596)|
 |State of AI-Based Monitoring in Smart Manufacturing and Introduction to Focused Section|IEEE/ASME Transactions on Mechatronics|2020|[paper](https://ieeexplore.ieee.org/document/9189823)|
 |An Intelligent Fault Diagnosis Method Using Unsupervised Feature Learning Towards Mechanical Big Data|IEEE Transactions on Industrial Electronics|2016|[paper](https://ieeexplore.ieee.org/document/7386639)|
-|One-Dimensional Residual Convolutional Autoencoder Based Feature Learning for Gearbox Fault Diagnosis|IEEE Transactions on Industrial Informatics|2020|[paper](https://ieeexplore.ieee.org/document/8957534)|
-
+|Wind Turbine Fault Detection Using a Denoising Autoencoder With Temporal Information|IEEE/ASME Transactions on Mechatronics|2018|[paper](https://ieeexplore.ieee.org/document/8059861)|
+|Unsupervised Anomaly Detection of Industrial Robots Using Sliding-Window Convolutional Variational Autoencoder|IEEE Access|2020|[paper](https://ieeexplore.ieee.org/document/9023488)|
+|Fault Diagnosis Framework of Rolling Bearing Using Adaptive Sparse Contrative Auto-Encoder With Optimized Unsupervised Extreme Learning Machine|IEEE Access|2019|[paper](https://ieeexplore.ieee.org/document/8945331)|
 
 > ## Valve Stiction
 
