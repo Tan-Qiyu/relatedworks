@@ -39,6 +39,7 @@
     - [Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering](#boyangpmlr)
     - [Improved deep embedded clustering with local structure preservation](#xifengguojicai17)
     - [Improving k-Means Clustering Performance with Disentangled Internal Representations](#abienfredagarap)
+    - [Deep Clustering with Convolutional Autoencoders](#xifengguoiconip17)
 
 
 - >> ### [Machine Learning](#ml)
@@ -306,6 +307,8 @@
     - ICML'16: Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 June 2016 Pages 478–487
     - Clustering is central to many data-driven application domains and has been studied extensively in terms of distance functions and grouping algorithms. Relatively little work has focused on learning representations for clustering. In this paper, we propose Deep Embedded Clustering (DEC), a method that simultaneously learns feature representations and cluster assignments using deep neural networks. DEC learns a mapping from the data space to a lower-dimensional feature space in which it iteratively optimizes a clustering objective. Our experimental evaluations on image and text corpora show significant improvement over state-of-the-art methods.
     - 提出深度嵌入聚类(Deep Embedded Clustering), 第一步度量嵌入表征与给定的聚类中心，第二步更新模型参数以及聚类中心基于额外的目标分布。核心在于如何定义target distribution P, 期望分布具有以下特性：强预测即聚类纯度要高、将更多的数据划分为高置信度：正则化损失贡献避免大的类别破坏隐特征空间。评价指标选择为ACC。在实验部分对多种因素进行了讨论。
+    - 包括自编码器的层级预训练以及抛弃掉decoder的finetune
+    - 仅采用聚类loss
  
 
 <span id="naveensai"> </span>
@@ -341,6 +344,19 @@
     - To be presented at IJCNN 2020 
     - Deep clustering algorithms combine representation learning and clustering by jointly optimizing a clustering loss and a non-clustering loss. In such methods, a deep neural network is used for representation learning together with a clustering network. Instead of following this framework to improve clustering performance, we propose a simpler approach of optimizing the entanglement of the learned latent code representation of an autoencoder. We define entanglement as how close pairs of points from the same class or structure are, relative to pairs of points from different classes or structures. To measure the entanglement of data points, we use the soft nearest neighbor loss, and expand it by introducing an annealing temperature factor. Using our proposed approach, the test clustering accuracy was 96.2% on the MNIST dataset, 85.6% on the Fashion-MNIST dataset, and 79.2% on the EMNIST Balanced dataset, outperforming our baseline models.
     - 这是一种两步聚类策略，首先通过ae学习disentangled internal representations, 然后再进行K-means聚类，基于一种soft nearest neighbor loss，本文提出一种改进的 Annealing Temperature Loss 来促使模型学习到合适的表征。
+
+
+<span id="xifengguoiconip17"> </span>
+- *Deep Clustering with Convolutional Autoencoders*  [^^^](#return)
+    - https://link.springer.com/chapter/10.1007/978-3-319-70096-0_39
+    - Xifeng Guo, Xinwang, LiuEn Zhu, Jianping Yin
+    - International Conference on Neural Information Processing ICONIP 2017: Neural Information Processing pp 373-382
+    - Deep clustering utilizes deep neural networks to learn feature representation that is suitable for clustering tasks. Though demonstrating promising performance in various applications, we observe that existing deep clustering algorithms either do not well take advantage of convolutional neural networks or do not considerably preserve the local structure of data generating distribution in the learned feature space. To address this issue, we propose a deep convolutional embedded clustering algorithm in this paper. Specifically, we develop a convolutional autoencoders structure to learn embedded features in an end-to-end way. Then, a clustering oriented loss is directly built on embedded features to jointly perform feature refinement and cluster assignment. To avoid feature space being distorted by the clustering loss, we keep the decoder remained which can preserve local structure of data in feature space. In sum, we simultaneously minimize the reconstruction loss of convolutional autoencoders and the clustering loss. The resultant optimization problem can be effectively solved by mini-batch stochastic gradient descent and back-propagation. Experiments on benchmark datasets empirically validate the power of convolutional autoencoders for feature learning and the effectiveness of local structure preservation.
+    - 提出一种CAE结构，经过三层卷积后将特征图flatten, 展开成向量，再连接10-D特征
+    - force the dimension of embedded space to equal to the number of clusters of dataset.
+    - loss = 重构loss + 聚类loss
+
+
 
 ---
 <span id="featureis"> </span>
