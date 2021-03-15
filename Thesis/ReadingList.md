@@ -13,6 +13,10 @@
 |A Review on Distance Based Time Series Classification|Data Mining and Knowledge Discovery|2019|[paper](https://link.springer.com/article/10.1007/s10618-018-0596-4)|
 |A Fast Shapelet Selection Algorithm For Time Series Classification|Computer Networks|2019|[paper](https://www.sciencedirect.com/science/article/pii/S1389128618312970)|
 |Unsupervised Classification of Multivariate Time Series Using VPCA and Fuzzy Clustering with Spatial Weighted Matrix Distance|IEEE Transactions on Cybernetics|2020|[paper](https://ieeexplore.ieee.org/document/8573123)|
+|Highly Comparative Feature-Based Time-Series Classification|IEEE Transactions on Knowledge and Data Engineering|2014|[paper](https://ieeexplore.ieee.org/document/6786425?arnumber=6786425&tag=1)|
+|Efficient Temporal Pattern Recognition by Means of Dissimilarity Space Embedding With Discriminative Prototypes|Pattern Recognition|2017|[paper](https://www.sciencedirect.com/science/article/pii/S0031320316303739)|
+|A Global Averaging Method For Dynamic Time Warping, With Applications To Clustering|Pattern Recognition|2011|[paper](https://www.sciencedirect.com/science/article/pii/S003132031000453X)|
+|A Benchmark Study on Time Series Clustering|Arxiv|2020|[paper](https://www.sciencedirect.com/science/article/pii/S2666827020300013)|
 
 
 >> ### Part 2: Model-based
@@ -29,12 +33,18 @@
 |Title|Publication|Year|Link|
 | :----------- | :-----------: | :-----------: | :----------- |
 | Structural Deep Clustering Network | WWW | 2020 |[paper](https://dl.acm.org/doi/10.1145/3366423.3380214)|
-|Unsupervised deep embedding for clustering analysis|ICML|2016|[paper](https://dl.acm.org/doi/10.5555/3045390.3045442)|
+|Unsupervised deep embedding for clustering analysis @DEC (Deep Embdeeing Clustering)|ICML|2016|[paper](https://dl.acm.org/doi/10.5555/3045390.3045442)|
 |Deep Temporal Clustering : Fully Unsupervised Learning of Time-Domain Features|arXiv|2018|[paper](https://arxiv.org/abs/1802.01059)|
 |Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering|PMLR|2017|[paper](http://proceedings.mlr.press/v70/yang17b.html)|
 |Improved deep embedded clustering with local structure preservation|JICAI|2017|[paper](https://www.ijcai.org/Proceedings/2017/243)|
 |Improving k-Means Clustering Performance with Disentangled Internal Representations|IJCNN|2020|[paper](https://arxiv.org/abs/2006.04535)|
-|Deep Clustering with Convolutional Autoencoders|ICONIP|2017|[paper](https://link.springer.com/chapter/10.1007/978-3-319-70096-0_39)|
+|Deep Clustering with Convolutional Autoencoders|ICONIP|2017|[paper](https://link.springer.com/chapter/10.1007/978-3-319-70096-0_39) [code](https://github.com/XifengGuo/IDEC)|
+|Deep Embedded Clustering with Data Augmentation @DEC-DA (Deep Embedded Clustering with Data Augmentation)|PMLR|2018|[paper]()|
+|Clustering time series data through autoencoder-based deep learning models|arXiv|2020|[paper](https://arxiv.org/abs/2004.07296)|
+|A Survey of Clustering with Deep Learning: From the Perspective of Network Architecture|IEEE Access|2018|[paper](https://ieeexplore.ieee.org/document/8412085)|
+|Clustering with deep learning: Taxonomy and new methods|arXiv|2018|[paper](https://arxiv.org/abs/1801.07648)|
+|A benchmark study on time series clustering|Machine Learning with Applications|2020|[paper](https://www.sciencedirect.com/science/article/pii/S2666827020300013)|
+|Deep Clustering via Joint Convolutional Autoencoder Embedding and Relative Entropy Minimization|ICCV|2017|[paper](https://arxiv.org/abs/1704.06327)|
 
 > ## Coumpter Vision (CV)
 

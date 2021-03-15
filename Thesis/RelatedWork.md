@@ -8,7 +8,7 @@
 - >> ### [Review/Survey](#review)
     - [A Review on Distance Based Time Series Classification](#amaiaabanda2019)
     - [State of AI-Based Monitoring in Smart Manufacturing and Introduction to Focused Section](#handingtmec2020)
-    - []
+    - 
 - >> ### [Time Series Representation/Classification/Forecasting](#tsrcf)
     - **Part 1:** Distance/Feature/Kernel-based
     - [Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles](#anthonybagnall2015)
@@ -16,22 +16,26 @@
     - [Mining Novel Multivariate Relationships In Time Series Data Using Correlation Networks](#saurabhagrawal2020)
     - [Classifying Time Series Using Local Descriptors with Hybrid Sampling](#jiapingzhao2016)
     - [Random Warping Series: A Random Features Method for Time-Series Embedding](#lingfeiwu2018)
-    - 
     - [A Fast Shapelet Selection Algorithm For Time Series Classification](#cunji2019)
     - [Unsupervised Classification of Multivariate Time Series Using VPCA and Fuzzy Clustering with Spatial Weighted Matrix Distance](#honghe)   
     - [Highly Comparative Feature-Based Time-Series Classification](#bendfulcher)
     - [Efficient Temporal Pattern Recognition by Means of Dissimilarity Space Embedding With Discriminative Prototypes](#briankenjiiwana)
     - [A Global Averaging Method For Dynamic Time Warping, With Applications To Clustering](#francois2011)
+    - 
     - **Part 2:** Model-based ((UN)supervised / deep learning)
     - [Time Series Classification with Multivariate Convolutional Neural Network](#chienliangliu2019)
     - [Learning Representations for Time Series Clustering](#qianlima)
     - [Multivariate LSTM-FCNs for time series classification](#fazlekarim)
     - [Temporal representation learning for time series classification](#yupenghu)
+    - [A Hybrid Deep Representation Learning Model for Time Series Classification and Prediction](#yangguo2017)
     - 
 
 - >> ### [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
 
+
+
+<span id="returncluster"> </span>
 - >> ### [Clustering Analysis](#cluster)
     - [Structural Deep Clustering Network](#deyubo)
     - [Unsupervised deep embedding for clustering analysis](#junyuanxie)
@@ -40,8 +44,11 @@
     - [Improved deep embedded clustering with local structure preservation](#xifengguojicai17)
     - [Improving k-Means Clustering Performance with Disentangled Internal Representations](#abienfredagarap)
     - [Deep Clustering with Convolutional Autoencoders](#xifengguoiconip17)
-
-
+    - [Deep Embedded Clustering with Data Augmentation](#xifengguopmlr18)
+    - [Clustering time series data through autoencoder-based deep learning models](#nedaarxiv)
+    - [A Survey of Clustering with Deep Learning: From the Perspective of Network Architecture](#erxueaccess)
+    - [Clustering with Deep Learning: Taxonomy and New Methods](#elie2018)
+    - [Deep Clustering via Joint Convolutional Autoencoder Embedding and Relative Entropy Minimization](#karmran2017)
 - >> ### [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
 
@@ -237,6 +244,19 @@
     Starting with existing techniques developed around DTW, the article suggests an analysis framework to classify averaging techniques. It then proceeds to study the two major questions lifted by the framework. First, we develop a global technique for averaging a set of sequences. This technique is original in that it avoids using iterative pairwise averaging. It is thus insensitive to ordering effects. Second, we describe a new strategy to reduce the length of the resulting average sequence. This has a favourable impact on performance, but also on the relevance of the results. Both aspects are evaluated on standard datasets, and the evaluation shows that they compare favourably with existing methods. The article ends by describing the use of averaging in clustering. The last section also introduces a new application domain, namely the analysis of satellite image time series, where data mining techniques provide an original approach.
     - 这篇
 
+<span id="alijaved"> </span>
+- *A Benchmark Study on Time Series Clustering* [^^^](#return)
+    - https://www.sciencedirect.com/science/article/pii/S2666827020300013
+    - Ali Javed, Byung Suk Lee, Donna M.Rizzo
+    - Machine Learning with Applications Volume 1, 15 September 2020,100001
+    - This paper presents the first time series clustering benchmark utilizing all time series datasets currently available in the University of California Riverside (UCR) archive — the state of the art repository of time series data. Specifically, the benchmark examines eight popular clustering methods representing three categories of clustering algorithms (partitional, hierarchical and density-based) and three types of distance measures (Euclidean, dynamic time warping, and shape-based), while adhering to six restrictions on datasets and methods to make the comparison as unbiased as possible. A phased evaluation approach was then designed for summarizing dataset-level assessment metrics and discussing the results. The benchmark study presented can be a useful reference for the research community on its own; and the dataset-level assessment metrics reported may be used for designing evaluation frameworks to answer different research questions.
+    - 基于传统距离方法的时序聚类基准 aims to address the limitation associated with testing time series clustering algorithms by providing a clustering benchmark. The
+    - 选择了8种聚类算法和3种聚类度量方式
+    - 
+    - 给定了6种限制：No pre-processing, Only uniform length time series, Known number of clusters, Minimum two classes, Established methods, Dataset-level assessment metrics.
+
+
+
 
 <span id="model"> </span>
 >> ### Model-based ((un/semi)-supervised / deep learning)
@@ -273,6 +293,14 @@
     - Recent years have witnessed the exponential growth of time series data as the popularity of sensing devices and development of IoT techniques; time series classification has been considered as one of the most challenging studies in time series data mining, attracting great interest over the last two decades. According to the empirical evidences, temporal representation learning-based time series classification has more superiority of accuracy, efficiency and interpretability as compared to hundreds of existing time series classification methods. However, due to the high time complexity of feature process, the performance of these methods has been severely restricted. In this paper, we first presented an efficient shapelet transformation method to improve the overall efficiency of time series classification, and then, we further developed a novel enhanced recurrent neural network model for deep representation learning to further improve the classification accuracy. Experimental results on typical real-world datasets have justified the superiority of our models over several shallow and deep representation learning competitors.
     - 1.提出一种有效的 shapelet transformation， 设定一段序列的变化点turning points (TP), 计算每个TP的重要度，选取一定比例的TP可以重构时序，TP可以反映整个序列的趋势。 2.将原始序列按照滑动窗口进行分割，再送入Bi-LSTM模型中
 
+<span id='yangguo2017'> </span>
+- *A Hybrid Deep Representation Learning Model for Time Series Classification and Prediction* [^^^](#return)
+    - https://ieeexplore.ieee.org/abstract/document/8113070
+    - Guo, Yang, Wu, Zhenyu, Ji, Yang
+    - 2017 3rd International Conference on Big Data Computing and Communications (BIGCOM) 
+    - Rapid increase in connectivity of physical sensors and Internet of Things (IoT) systems is enabling large-scale collection of time series data, and the data represents the working patterns and internal evolutions of observed objects. Recognizing and forecasting the underlying high-level states from raw sensory data are useful for daily activity recognition of humans and predictive maintenance of machines. Deep Learning (DL) methods have been proved efficient in computer vision, natural language processing, and speech recognition, and these model are also applied to time series analysis. Since time series are multi-dimensional and sequential with long-term temporal dependency, current DL-based model could not well learn the spatial and temporal features inside and between states, thus there is still plenty of room for improvement of recognizing and predicting high-level states. In this paper, a hybrid deep architecture named Long-term Recurrent Convolutional LSTM Network (LR-ConvLSTM) is proposed. The model is composed of Convolutional LSTM layers to extract features inside a high-level state, and extra LSTM layers to capture temporal dependencies between high-level states. We evaluate our model on the Opportunity dataset that has once been used in public activity recognition challenge. The results show that the proposed model has a good performance both in time series classification and prediction tasks.
+    - 提出 Long-term Recurrent Convolutional LSTM
+    - 
 
 
 ----
@@ -293,7 +321,7 @@
 <span id="cluster"> </span>
 > ## **Clustering Analysis**  
 <span id="deyubo"> </span>
-- *Structural Deep Clustering Network* [^^^](#return)
+- *Structural Deep Clustering Network* [^^^](#returncluster)
     - https://dl.acm.org/doi/10.1145/3366423.3380214
     - Deyu Bo, Xiao Wang, Chuan SHi, Meiqi Zhu, Emiao Lu, Peng Cui
     - WWW '20: Proceedings of The Web Conference 2020, April 2020, Pages 1400–1410
@@ -301,7 +329,7 @@
     - 基于自编码器和图网络进行特征表征学习，分两路，一路是用自编码器得到每层编码的特征H， 另一路是用GCN进行表征学习结构化特征Z，在GCN和AE的每层进行交互 ，参考公式（6），提出一种对偶自监督模块。 损失函数为类别的目标分布与网络计算分布的差异，用KL散度衡量，具体参考文章3.4节。Target distribution 通过计算得出。
 
 <span id="junyuanxie"> </span>
-- *Unsupervised deep embedding for clustering analysis* [^^^](#return)
+- *Unsupervised deep embedding for clustering analysis* [^^^](#returncluster)
     - https://dl.acm.org/doi/10.5555/3045390.3045442
     - Junyuan Xie, Ross Girshick, Ali Farhadi
     - ICML'16: Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 June 2016 Pages 478–487
@@ -312,7 +340,7 @@
  
 
 <span id="naveensai"> </span>
-- *Deep Temporal Clustering: Fully Unsupervised Learning of Time-Domain Features* [^^^](#return)
+- *Deep Temporal Clustering: Fully Unsupervised Learning of Time-Domain Features* [^^^](#returncluster)
     - https://arxiv.org/abs/1802.01059
     - Naveen Sai Madiraju, Seid M. Sadat, Dimitry Fisher, Homa Karimabadi
     - arXiv:1802.01059, February 2018
@@ -320,7 +348,7 @@
     - 提出deep temporal clustering (DTC) 将降维和时间聚类融合到一个端到端的框架，完全无监督。利用自编码器实现降维，设计了一个新的聚类层，聚类层可以使用任意的temporal similarity metric，提供了可视化方法。
 
 <span id="boyangpmlr"> </span>
-- *Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering* [^^^](#return)
+- *Towards K-means-friendly Spaces: Simultaneous Deep Learning and Clustering* [^^^](#returncluster)
     - http://proceedings.mlr.press/v70/yang17b.html
     - Bo Yang, Xiao Fu, Nicholas D. Sidiropoulos, Mingyi Hong
     - Proceedings of the 34th International Conference on Machine Learning, PMLR 70:3861-3870, 2017
@@ -330,7 +358,7 @@
 
 
 <spna id="xifengguojicai17"> </span>
-- *Improved deep embedded clustering with local structure preservation* [^^^](#return)
+- *Improved deep embedded clustering with local structure preservation* [^^^](#returncluster)
     - https://www.ijcai.org/Proceedings/2017/243
     - Xifeng Guo, Long Gao, Xinwang Liu, Jianping Yin
     - Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence Main track. Pages 1753-1759
@@ -338,16 +366,15 @@
     - 提出Improved Deep Embedded Clustering, 是DEC的改进版本(unsupervised deep embedding for clustering analysis)。IDEC算法中，首先采用了去噪自编码器对数据进行表征，根据z来获得初始的聚类中心，再用自编码器保留数据的局部结构（local structure）
 
 <span id="abienfredagarap"> </span>
-- *Improving k-Means Clustering Performance with Disentangled Internal Representations* [^^^](#return)
+- *Improving k-Means Clustering Performance with Disentangled Internal Representations* [^^^](#returncluster)
     - https://arxiv.org/abs/2006.04535
     - Abien Fred Agarap, Arnulfo P. Azcarraga
     - To be presented at IJCNN 2020 
     - Deep clustering algorithms combine representation learning and clustering by jointly optimizing a clustering loss and a non-clustering loss. In such methods, a deep neural network is used for representation learning together with a clustering network. Instead of following this framework to improve clustering performance, we propose a simpler approach of optimizing the entanglement of the learned latent code representation of an autoencoder. We define entanglement as how close pairs of points from the same class or structure are, relative to pairs of points from different classes or structures. To measure the entanglement of data points, we use the soft nearest neighbor loss, and expand it by introducing an annealing temperature factor. Using our proposed approach, the test clustering accuracy was 96.2% on the MNIST dataset, 85.6% on the Fashion-MNIST dataset, and 79.2% on the EMNIST Balanced dataset, outperforming our baseline models.
     - 这是一种两步聚类策略，首先通过ae学习disentangled internal representations, 然后再进行K-means聚类，基于一种soft nearest neighbor loss，本文提出一种改进的 Annealing Temperature Loss 来促使模型学习到合适的表征。
 
-
 <span id="xifengguoiconip17"> </span>
-- *Deep Clustering with Convolutional Autoencoders*  [^^^](#return)
+- *Deep Clustering with Convolutional Autoencoders*  [^^^](#returncluster)
     - https://link.springer.com/chapter/10.1007/978-3-319-70096-0_39
     - Xifeng Guo, Xinwang, LiuEn Zhu, Jianping Yin
     - International Conference on Neural Information Processing ICONIP 2017: Neural Information Processing pp 373-382
@@ -356,11 +383,61 @@
     - force the dimension of embedded space to equal to the number of clusters of dataset.
     - loss = 重构loss + 聚类loss
 
+<span id="xifengguopmlr18"> </span>
+- *Deep Embedded Clustering with Data Augmentation*  [^^^](#returncluster)
+    - http://proceedings.mlr.press/v95/guo18b.html
+    - Xifeng Guo, En Zhu, Xinwang Liu, Jianping Yin
+    - Proceedings of The 10th Asian Conference on Machine Learning, PMLR 95:550-565, 2018. 
+    - Deep Embedded Clustering (DEC) surpasses traditional clustering algorithms by jointly performing feature learning and cluster assignment. Although a lot of variants have emerged, they all ignore a crucial ingredient, \emph{data augmentation}, which has been widely employed in supervised deep learning models to improve the generalization. To fill this gap, in this paper, we propose the framework of Deep Embedded Clustering with Data Augmentation (DEC-DA). Specifically, we first train an autoencoder with the augmented data to construct the initial feature space. Then we constrain the embedded features with a clustering loss to further learn clustering-oriented features. The clustering loss is composed of the target (pseudo label) and the actual output of the feature learning model, where the target is computed by using clean (non-augmented) data, and the output by augmented data. This is analogous to supervised training with data augmentation and expected to facilitate unsupervised clustering too. Finally, we instantiate five DEC-DA based algorithms. Extensive experiments validate that incorporating data augmentation can improve the clustering performance by a large margin. Our DEC-DA algorithms become the new state of the art on various datasets. 
+    - propose Deep Embedded Clustering with Data Augmentation (DEC-DA)
+    - incorporate data augmentation into the pretraining stage 数据增强 预训练阶段
+    - 对每一个样本进行了随机变换
+
+<span id="nedaarxiv"> </span>
+- *Clustering time series data through autoencoder-based deep learning models* [^^^](#returncluster)
+    - https://arxiv.org/abs/2004.07296
+    - Neda Tavakoli, Sima Siami-Namini, Mahdi Adl Khanghah, Fahimeh Mirza Soltani, Akbar Siami Namin
+    - arXiv:2004.07296
+    - Machine learning and in particular deep learning algorithms are the emerging approaches to data analysis. These techniques have transformed traditional data mining-based analysis radically into a learning-based model in which existing data sets along with their cluster labels (i.e., train set) are learned to build a supervised learning model and predict the cluster labels of unseen data (i.e., test set). In particular, deep learning techniques are capable of capturing and learning hidden features in a given data sets and thus building a more accurate prediction model for clustering and labeling problem. However, the major problem is that time series data are often unlabeled and thus supervised learning-based deep learning algorithms cannot be directly adapted to solve the clustering problems for these special and complex types of data sets. To address this problem, this paper introduces a two-stage method for clustering time series data. First, a novel technique is introduced to utilize the characteristics (e.g., volatility) of given time series data in order to create labels and thus be able to transform the problem from unsupervised learning into supervised learning. Second, an autoencoder-based deep learning model is built to learn and model both known and hidden features of time series data along with their created labels to predict the labels of unseen time series data. The paper reports a case study in which financial and stock time series data of selected 70 stock indices are clustered into distinct groups using the introduced two-stage procedure. The results show that the proposed procedure is capable of achieving 87.5\% accuracy in clustering and predicting the labels for unseen time series data. 
+    - 提出一种两阶段方法
+    - 第一阶段将无监督任务变为有监督任务，也就是先提取特征，利用kmeans去聚出类别，作为有监督任务的参考标签
+    - 第二阶段利用深度自编码器提取高维和隐藏的特征
+    - 总结了4种类型的时序表征方法：1) data adaptive, 2) non-data adaptive, 3) model-based, and 4) data-dictated (or clipped data) based approaches
+
+
+<span id='erxueaccess'> </span>
+- *A Survey of Clustering with Deep Learning: From the Perspective of Network Architecture* [^^^](#returncluster)
+    - https://ieeexplore.ieee.org/document/8412085
+    - Erxue Min; Xifeng Guo; Qiang Liu; Gen Zhang; Jianjing Cui; Jun Long
+    -  IEEE Access ( Volume: 6) Page(s): 39501 - 39514
+    - Clustering is a fundamental problem in many data-driven application domains, and clustering performance highly depends on the quality of data representation. Hence, linear or non-linear feature transformations have been extensively used to learn a better data representation for clustering. In recent years, a lot of works focused on using deep neural networks to learn a clustering-friendly representation, resulting in a significant increase of clustering performance. In this paper, we give a systematic survey of clustering with deep learning in views of architecture. Specifically, we first introduce the preliminary knowledge for better understanding of this field. Then, a taxonomy of clustering with deep learning is proposed and some representative methods are introduced. Finally, we propose some interesting future opportunities of clustering with deep learning and give some conclusion remarks.
+    - 
+
+<span id='elie2018'> </span>
+- *Clustering with deep learning: Taxonomy and new methods* [^^^](#returncluster)
+    - https://arxiv.org/abs/1801.07648
+    - Elie Aljalbout, Vladimir Golkov, Yawar Siddiqui, Maximilian Strobel, Daniel Cremers
+    - arXiv 2018
+    - Clustering methods based on deep neural networks have proven promising for clustering real-world data because of their high representational power. In this paper, we propose a systematic taxonomy of clustering methods that utilize deep neural networks. We base our taxonomy on a comprehensive review of recent work and validate the taxonomy in a case study. In this case study, we show that the taxonomy enables researchers and practitioners to systematically create new clustering methods by selectively recombining and replacing distinct aspects of previous methods with the goal of overcoming their individual limitations. The experimental evaluation confirms this and shows that the method created for the case study achieves state-of-the-art clustering quality and surpasses it in some cases. 
+
+<span id='karmran2017'> </span>
+ - *Deep Clustering via Joint Convolutional Autoencoder Embedding and Relative Entropy Minimization* [^^^](#returncluster)
+    - https://arxiv.org/abs/1704.06327
+    - Kamran Ghasedi Dizaji, Amirhossein Herandi, Cheng Deng, Weidong Cai, Heng Huang
+    - 
+    - Image clustering is one of the most important computer vision applications, which has been extensively studied in literature. However, current clustering methods mostly suffer from lack of efficiency and scalability when dealing with large-scale and high-dimensional data. In this paper, we propose a new clustering model, called DEeP Embedded RegularIzed ClusTering (DEPICT), which efficiently maps data into a discriminative embedding subspace and precisely predicts cluster assignments. DEPICT generally consists of a multinomial logistic regression function stacked on top of a multi-layer convolutional autoencoder. We define a clustering objective function using relative entropy (KL divergence) minimization, regularized by a prior for the frequency of cluster assignments. An alternating strategy is then derived to optimize the objective by updating parameters and estimating cluster assignments. Furthermore, we employ the reconstruction loss functions in our autoencoder, as a data-dependent regularization term, to prevent the deep embedding function from overfitting. In order to benefit from end-to-end optimization and eliminate the necessity for layer-wise pretraining, we introduce a joint learning framework to minimize the unified clustering and reconstruction loss functions together and train all network layers simultaneously. Experimental results indicate the superiority and faster running time of DEPICT in real-world clustering tasks, where no labeled data is available for hyper-parameter tuning. 
+    - 隐变量连接一个softmax层实现聚类分配
+    - 构建两种不同的前向通道， Corrupted feedforward (encoder) 和 Clean feedforward (encoder) pathway
+    - Corrupted 用来实现聚类的指派, 也就是predict distribution
+    - clean 通道用来估计target distribution Q
+    - 有一个Decoder用来重构input
+    - 提出一种交替学习策略来估计Q以及优化自编码器的模型参数
 
 
 ---
 <span id="featureis"> </span>
 > ## **Feature Interaction&Selection**
+
 
 ---
 <span id="cv"> </span>
