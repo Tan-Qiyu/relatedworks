@@ -26,7 +26,8 @@
 |Learning Representations for Time Series Clustering | NIPS | 2019 | [paper](https://papers.nips.cc/paper/2019/hash/1359aa933b48b754a2f54adb688bfa77-Abstract.html)|
 |Multivariate LSTM-FCNs for time series classification|Neural Networks|2019|[paper](https://www.sciencedirect.com/science/article/pii/S0893608019301200)|
 |Temporal representation learning for time series classification|Neural Computing and Applications|2020|[paper](https://link.springer.com/article/10.1007/s00521-020-05179-w)|
-||||
+|A Hybrid Deep Representation Learning Model for Time Series Classification and Prediction|BIGCOM|2017|[paper](https://ieeexplore.ieee.org/abstract/document/8113070)|
+|An empirical survey of data augmentation for time series classification with neural networks|arXiv|2020|[paper](https://arxiv.org/abs/2007.15951)|
 
 
 > ## Clustering Analysis 
@@ -45,6 +46,8 @@
 |Clustering with deep learning: Taxonomy and new methods|arXiv|2018|[paper](https://arxiv.org/abs/1801.07648)|
 |A benchmark study on time series clustering|Machine Learning with Applications|2020|[paper](https://www.sciencedirect.com/science/article/pii/S2666827020300013)|
 |Deep Clustering via Joint Convolutional Autoencoder Embedding and Relative Entropy Minimization|ICCV|2017|[paper](https://arxiv.org/abs/1704.06327)|
+|Contrastive clustering|AAAI|2021|[paper](https://arxiv.org/abs/2009.09687)|
+|A Simple Framework for Contrastive Learning of Visual Representations|PMLR|2020|[paper](http://proceedings.mlr.press/v119/chen20j.html)|
 
 > ## Coumpter Vision (CV)
 

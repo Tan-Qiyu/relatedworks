@@ -28,7 +28,7 @@
     - [Multivariate LSTM-FCNs for time series classification](#fazlekarim)
     - [Temporal representation learning for time series classification](#yupenghu)
     - [A Hybrid Deep Representation Learning Model for Time Series Classification and Prediction](#yangguo2017)
-    - 
+    - [An empirical survey of data augmentation for time series classification with neural networks](#brlan2020)
 
 - >> ### [Anomaly Detection](#anomaly)
     - [A Deep Neural Network For Unsupervised Anomaly Detection And Diagnosis In Multivariate Time Series Data](#chuxuzhang)
@@ -49,6 +49,9 @@
     - [A Survey of Clustering with Deep Learning: From the Perspective of Network Architecture](#erxueaccess)
     - [Clustering with Deep Learning: Taxonomy and New Methods](#elie2018)
     - [Deep Clustering via Joint Convolutional Autoencoder Embedding and Relative Entropy Minimization](#karmran2017)
+    - [Contrastive clustering](#yuanfanli2021)
+    - [A Simple Framework for Contrastive Learning of Visual Representations](#chentingsimclr)
+
 - >> ### [Machine Learning](#ml)
     - [LightGBM: A highly efficient gradient boosting decision tree](#guolinke)
 
@@ -302,6 +305,13 @@
     - 提出 Long-term Recurrent Convolutional LSTM
     - 
 
+<span id='brlan2020'> </span>
+- *An Empirical Survey of Data Augmentation for Time Series Classification with Neural Networks* [^^^](#return)
+    - https://arxiv.org/abs/2007.15951
+    - Brian Kenji Iwana, Seiichi Uchida
+    - In recent times, deep artificial neural networks have achieved many successes in pattern recognition. Part of this success can be attributed to the reliance on big data to increase generalization. However, in the field of time series recognition, many datasets are often very small. One method of addressing this problem is through the use of data augmentation. In this paper, we survey data augmentation techniques for time series and their application to time series classification with neural networks. We outline four families of time series data augmentation, including transformation-based methods, pattern mixing, generative models, and decomposition methods, and detail their taxonomy. Furthermore, we empirically evaluate 12 time series data augmentation methods on 128 time series classification datasets with 6 different types of neural networks. Through the results, we are able to analyze the characteristics, advantages and disadvantages, and recommendations of each data augmentation method. This survey aims to help in the selection of time series data augmentation for neural network applications. 
+    - 总结了时间序列数据的数据增强方法
+    - 进行了完整的评估，从数据类型和模型类型两个角度给出了推荐的增强方法
 
 ----
 <span id="anomaly"> </span>
@@ -432,6 +442,22 @@
     - clean 通道用来估计target distribution Q
     - 有一个Decoder用来重构input
     - 提出一种交替学习策略来估计Q以及优化自编码器的模型参数
+
+<span id='yuanfanli2021'> </span>
+- *Contrastive Clustering*  [^^^](#returncluster)
+    - https://arxiv.org/abs/2009.09687
+    - Yunfan Li, Peng Hu, Zitao Liu, Dezhong Peng, Joey Tianyi Zhou, Xi Peng
+    - In this paper, we propose a one-stage online clustering method called Contrastive Clustering (CC) which explicitly performs the instance- and cluster-level contrastive learning. To be specific, for a given dataset, the positive and negative instance pairs are constructed through data augmentations and then projected into a feature space. Therein, the instance- and cluster-level contrastive learning are respectively conducted in the row and column space by maximizing the similarities of positive pairs while minimizing those of negative ones. Our key observation is that the rows of the feature matrix could be regarded as soft labels of instances, and accordingly the columns could be further regarded as cluster representations. By simultaneously optimizing the instance- and cluster-level contrastive loss, the model jointly learns representations and cluster assignments in an end-to-end manner. Extensive experimental results show that CC remarkably outperforms 17 competitive clustering methods on six challenging image benchmarks. In particular, CC achieves an NMI of 0.705 (0.431) on the CIFAR-10 (CIFAR-100) dataset, which is an up to 19\% (39\%) performance improvement compared with the best baseline. 
+    - 通过数据增强来获得positive pair 和 negative pair
+    - 提出同时考虑Instance-Level contrastive 和 Cluster-Level Contrastive
+    - first work of clustering-specified contrastive learning
+
+<span id='chentingsimclr'> </span>
+- *A Simple Framework for Contrastive Learning of Visual Representations
+Ting* [^^^](#returncluster)
+    - http://proceedings.mlr.press/v119/chen20j.html
+    - Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton
+    - This paper presents SimCLR: a simple framework for contrastive learning of visual representations. We simplify recently proposed contrastive self-supervised learning algorithms without requiring specialized architectures or a memory bank. In order to understand what enables the contrastive prediction tasks to learn useful representations, we systematically study the major components of our framework. We show that (1) composition of data augmentations plays a critical role in defining effective predictive tasks, (2) introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations, and (3) contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning. By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50. When fine-tuned on only 1% of the labels, we achieve 85.8% top-5 accuracy, outperforming AlexNet with 100X fewer labels. 
 
 
 ---
